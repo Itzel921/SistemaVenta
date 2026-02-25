@@ -38,18 +38,21 @@
             // 
             // txtidcategoria
             // 
-            this.txtidcategoria.Location = new System.Drawing.Point(249, 41);
+            this.txtidcategoria.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txtidcategoria.Location = new System.Drawing.Point(331, 36);
             this.txtidcategoria.Name = "txtidcategoria";
-            this.txtidcategoria.Size = new System.Drawing.Size(100, 22);
+            this.txtidcategoria.Size = new System.Drawing.Size(100, 27);
             this.txtidcategoria.TabIndex = 22;
             this.txtidcategoria.Visible = false;
             // 
             // btncancelar
             // 
             this.btncancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btncancelar.Location = new System.Drawing.Point(274, 225);
+            this.btncancelar.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btncancelar.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btncancelar.Location = new System.Drawing.Point(81, 213);
             this.btncancelar.Name = "btncancelar";
-            this.btncancelar.Size = new System.Drawing.Size(75, 23);
+            this.btncancelar.Size = new System.Drawing.Size(110, 35);
             this.btncancelar.TabIndex = 21;
             this.btncancelar.Text = "&Cancelar";
             this.btncancelar.UseVisualStyleBackColor = true;
@@ -58,9 +61,11 @@
             // btnguardar
             // 
             this.btnguardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnguardar.Location = new System.Drawing.Point(160, 225);
+            this.btnguardar.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnguardar.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnguardar.Location = new System.Drawing.Point(246, 213);
             this.btnguardar.Name = "btnguardar";
-            this.btnguardar.Size = new System.Drawing.Size(75, 23);
+            this.btnguardar.Size = new System.Drawing.Size(110, 35);
             this.btnguardar.TabIndex = 20;
             this.btnguardar.Text = "&Guardar";
             this.btnguardar.UseVisualStyleBackColor = true;
@@ -68,30 +73,31 @@
             // 
             // txtdescripcion
             // 
-            this.txtdescripcion.Location = new System.Drawing.Point(38, 126);
+            this.txtdescripcion.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtdescripcion.Location = new System.Drawing.Point(35, 134);
             this.txtdescripcion.Name = "txtdescripcion";
-            this.txtdescripcion.Size = new System.Drawing.Size(191, 22);
+            this.txtdescripcion.Size = new System.Drawing.Size(289, 27);
             this.txtdescripcion.TabIndex = 19;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 12F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.label2.Location = new System.Drawing.Point(33, 95);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 28);
+            this.label2.Size = new System.Drawing.Size(120, 24);
             this.label2.TabIndex = 18;
-            this.label2.Text = "Categoria";
+            this.label2.Text = "Categoria:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 12F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.label1.Location = new System.Drawing.Point(31, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(211, 28);
+            this.label1.Size = new System.Drawing.Size(287, 24);
             this.label1.TabIndex = 17;
             this.label1.Text = "Registrar Nueva Categoria";
             // 

@@ -91,3 +91,79 @@ VALUES
     ('Juan', 'Pérez García', '12345678', 'RFC001', '5551234567', 'ACTIVO');
 
 GO
+
+
+CREATE PROCEDURE SPListar_Producto
+AS
+	SELECT P.idproducto, P.codigo, P.nombre, P.descripcion, P.f_ingreso, P.f_vencimiento, P.precio_compra, P.precio_venta, P.stock, P.estado, P.id_categoria, C.descripcion 
+	AS categoria
+	FROM categoria C INNER JOIN producto P ON C.idcategoria = P.id_categoria
+
+
+
+
+CREATE PROCEDURE SPBuscar_Producto_codigo
+@codigo varchar(30)
+AS
+	SELECT P.idproducto, P.codigo, P.nombre, P.descripcion, 
+	P.f_ingreso, P.f_vencimiento, P.precio_compra, 
+	P.precio_venta, P.stock, P.estado, 
+	P.id_categoria, C.descripcion AS categoria
+	FROM categoria C INNER JOIN producto P ON C.idcategoria = P.id_categoria
+	WHERE P.codigo LIKE @codigo
+	ORDER BY P.idproducto
+
+
+
+CREATE PROCEDURE SPGuardar_Producto
+	@idproducto int output,
+	@codigo varchar(30),
+	@nombre varchar(30),
+	@descripcion varchar(50),
+	@f_ingreso date,
+	@f_vencimiento date,
+	@precio_compra decimal(8,2),
+	@precio_venta decimal(8,2),
+	@stock int,
+	@estado varchar(10),
+	@id_categoria int
+AS
+	INSERT INTO producto(codigo, nombre, descripcion,f_ingreso, f_vencimiento, precio_compra, precio_venta, stock, estado, id_categoria)
+	VALUES(@codigo, @nombre, @descripcion, @f_ingreso, @f_vencimiento, @precio_compra, @precio_venta, @stock, @estado, @id_categoria)
+
+
+
+
+CREATE PROCEDURE SPEditar_Producto
+	@idproducto int output,
+	@codigo varchar(30),
+	@nombre varchar(30),
+	@descripcion varchar(50),
+	@f_ingreso date,
+	@f_vencimiento date,
+	@precio_compra decimal(8,2),
+	@precio_venta decimal(8,2),
+	@stock int,
+	@estado varchar(10),
+	@id_categoria int
+AS
+	UPDATE producto
+		SET codigo = @codigo,
+			nombre = @nombre,
+			descripcion = @descripcion,
+			f_ingreso = @f_ingreso,
+			f_vencimiento = @f_vencimiento,
+			precio_compra = @precio_compra,
+			precio_venta = @precio_venta,
+			stock = @stock,
+			estado = @estado,
+			id_categoria = @id_categoria
+		WHERE idproducto = @idproducto
+
+
+
+CREATE PROCEDURE SPEliminar_Producto
+	@idproducto int
+AS
+	DELETE FROM producto WHERE idproducto = @idproducto
+GO

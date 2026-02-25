@@ -32,13 +32,7 @@ namespace CapaPresentacion
             InitializeComponent();
         }
 
-        private void FrmListadoCliente_Load(object sender, EventArgs e)
-        {
-            this.Top = 150;
-            this.Left = 100;
-
-            Mostrar();
-        }
+     
 
         //Metodo para mostrar los registros de DataGridView
         public void Mostrar()
@@ -227,6 +221,7 @@ namespace CapaPresentacion
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmListadoCliente";
+            this.Load += new System.EventHandler(this.FrmListadoCliente_Load_1);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -313,6 +308,14 @@ namespace CapaPresentacion
         private void txtbuscar_TextChanged(object sender, EventArgs e)
         {
             this.BuscarNombre();
+        }
+
+        private void FrmListadoCliente_Load_1(object sender, EventArgs e)
+        {
+            this.Top = 150;
+            this.Left = 100;
+
+            Mostrar();
         }
     }
     }
