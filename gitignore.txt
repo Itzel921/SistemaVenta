@@ -1,0 +1,35 @@
+# Visual Studio / IDE
+.vs
+*.user
+*.suo
+*.wsuo
+
+# Build outputs
+bin/
+obj/
+
+# Local config / secrets
+appsettings.json
+*.env
+
+# Databases / backups
+*.mdf
+*.ldf
+*.bak
+*.sqlite
+backups/
+*.zip
+
+# Obsidian (editor state)
+.obsidian/
+
+# Logs
+*.log
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+
+*.pdf
+*.cache
