@@ -128,8 +128,13 @@ CREATE PROCEDURE SPGuardar_Producto
 	@estado varchar(10),
 	@id_categoria int
 AS
+BEGIN
 	INSERT INTO producto(codigo, nombre, descripcion,f_ingreso, f_vencimiento, precio_compra, precio_venta, stock, estado, id_categoria)
 	VALUES(@codigo, @nombre, @descripcion, @f_ingreso, @f_vencimiento, @precio_compra, @precio_venta, @stock, @estado, @id_categoria)
+	
+	SET @idproducto = @@IDENTITY
+END;
+GO
 
 
 

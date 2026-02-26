@@ -1,6 +1,7 @@
 create database dbventas 
 go
 USE dbventas
+go
 
 CREATE TABLE cliente( 
 	idcliente INT IDENTITY PRIMARY KEY, 
@@ -108,3 +109,5 @@ CREATE TABLE detalleventa(
 
 SELECT * FROM usuario
 SELECT * FROM cliente
+SELECT * FROM producto
+SELECT * FROM categoria

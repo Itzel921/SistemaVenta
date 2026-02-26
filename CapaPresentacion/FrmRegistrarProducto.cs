@@ -20,7 +20,25 @@ namespace CapaPresentacion
         public FrmRegistrarProducto()
         {
             InitializeComponent();
+            this.Insert = true;
+            this.txtidcategoria.Text = "1";
         }
+
+      
+
+        private void FrmRegistrarProducto_Load(object sender, EventArgs e)
+        {
+
+            this.Top = 150;
+            this.Left = 100;
+
+        }
+
+        private void btncancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
@@ -37,11 +55,9 @@ namespace CapaPresentacion
 
             try
             {
-
-
                 if (this.txtnombre.Text == string.Empty || this.txtcodigo.Text == string.Empty || this.txtdescripcion.Text == string.Empty || this.txtPcompra.Text == string.Empty || this.txtPventa.Text == string.Empty)
                 {
-                    MessageBox.Show("Ingrese los datos de ", "Sistema de Ventas", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Ingrese los datos de los productos", "Sistema de Ventas", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
                 else
@@ -61,7 +77,7 @@ namespace CapaPresentacion
                     this.Insert = false;
                     this.Edit = false;
 
-                    
+
                 }
             }
             catch (Exception ex)
@@ -69,14 +85,7 @@ namespace CapaPresentacion
                 MessageBox.Show(ex.Message + ex.StackTrace);
 
             }
-        }
-
-        private void FrmRegistrarProducto_Load(object sender, EventArgs e)
-        {
-
-            this.Top = 0;
-            this.Left = 0;
-
+        
         }
     }
 }

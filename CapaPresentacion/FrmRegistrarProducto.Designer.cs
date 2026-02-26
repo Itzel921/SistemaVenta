@@ -53,6 +53,7 @@
             this.rbPasivo = new System.Windows.Forms.RadioButton();
             this.txtdescripcion = new System.Windows.Forms.RichTextBox();
             this.txtStock = new System.Windows.Forms.NumericUpDown();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.txtStock)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,19 +70,20 @@
             this.btncancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btncancelar.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
             this.btncancelar.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btncancelar.Location = new System.Drawing.Point(332, 661);
+            this.btncancelar.Location = new System.Drawing.Point(333, 653);
             this.btncancelar.Name = "btncancelar";
             this.btncancelar.Size = new System.Drawing.Size(115, 34);
             this.btncancelar.TabIndex = 32;
             this.btncancelar.Text = "&Cancelar";
             this.btncancelar.UseVisualStyleBackColor = true;
+            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
             // 
             // btnguardar
             // 
             this.btnguardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnguardar.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnguardar.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnguardar.Location = new System.Drawing.Point(171, 661);
+            this.btnguardar.Location = new System.Drawing.Point(172, 653);
             this.btnguardar.Name = "btnguardar";
             this.btnguardar.Size = new System.Drawing.Size(113, 34);
             this.btnguardar.TabIndex = 31;
@@ -100,7 +102,7 @@
             // txtnombre
             // 
             this.txtnombre.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.txtnombre.Location = new System.Drawing.Point(36, 123);
+            this.txtnombre.Location = new System.Drawing.Point(37, 123);
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(227, 27);
             this.txtnombre.TabIndex = 24;
@@ -121,7 +123,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 12F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label3.Location = new System.Drawing.Point(33, 186);
+            this.label3.Location = new System.Drawing.Point(35, 180);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(139, 24);
             this.label3.TabIndex = 19;
@@ -152,7 +154,7 @@
             // dateFingreso
             // 
             this.dateFingreso.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.dateFingreso.Location = new System.Drawing.Point(36, 377);
+            this.dateFingreso.Location = new System.Drawing.Point(37, 369);
             this.dateFingreso.Name = "dateFingreso";
             this.dateFingreso.Size = new System.Drawing.Size(217, 27);
             this.dateFingreso.TabIndex = 34;
@@ -162,7 +164,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 12F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label8.Location = new System.Drawing.Point(34, 341);
+            this.label8.Location = new System.Drawing.Point(35, 333);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(193, 24);
             this.label8.TabIndex = 35;
@@ -173,7 +175,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 12F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label9.Location = new System.Drawing.Point(323, 341);
+            this.label9.Location = new System.Drawing.Point(324, 333);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(240, 24);
             this.label9.TabIndex = 37;
@@ -182,7 +184,7 @@
             // dateFvencimiento
             // 
             this.dateFvencimiento.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.dateFvencimiento.Location = new System.Drawing.Point(323, 377);
+            this.dateFvencimiento.Location = new System.Drawing.Point(324, 369);
             this.dateFvencimiento.Name = "dateFvencimiento";
             this.dateFvencimiento.Size = new System.Drawing.Size(224, 27);
             this.dateFvencimiento.TabIndex = 36;
@@ -192,7 +194,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 12F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label4.Location = new System.Drawing.Point(34, 441);
+            this.label4.Location = new System.Drawing.Point(35, 433);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(194, 24);
             this.label4.TabIndex = 20;
@@ -201,7 +203,7 @@
             // txtPcompra
             // 
             this.txtPcompra.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtPcompra.Location = new System.Drawing.Point(38, 477);
+            this.txtPcompra.Location = new System.Drawing.Point(39, 469);
             this.txtPcompra.Name = "txtPcompra";
             this.txtPcompra.Size = new System.Drawing.Size(216, 27);
             this.txtPcompra.TabIndex = 26;
@@ -211,7 +213,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 12F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label10.Location = new System.Drawing.Point(323, 441);
+            this.label10.Location = new System.Drawing.Point(324, 433);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(177, 24);
             this.label10.TabIndex = 38;
@@ -220,25 +222,25 @@
             // txtPventa
             // 
             this.txtPventa.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtPventa.Location = new System.Drawing.Point(323, 477);
+            this.txtPventa.Location = new System.Drawing.Point(324, 469);
             this.txtPventa.Name = "txtPventa";
             this.txtPventa.Size = new System.Drawing.Size(224, 27);
             this.txtPventa.TabIndex = 39;
             // 
             // txtidcategoria
             // 
-            this.txtidcategoria.Location = new System.Drawing.Point(422, 37);
+            this.txtidcategoria.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtidcategoria.Location = new System.Drawing.Point(316, 231);
             this.txtidcategoria.Name = "txtidcategoria";
-            this.txtidcategoria.Size = new System.Drawing.Size(111, 22);
+            this.txtidcategoria.Size = new System.Drawing.Size(231, 27);
             this.txtidcategoria.TabIndex = 43;
-            this.txtidcategoria.Visible = false;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label11.Location = new System.Drawing.Point(339, 542);
+            this.label11.Location = new System.Drawing.Point(340, 534);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(0, 24);
             this.label11.TabIndex = 42;
@@ -248,7 +250,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 12F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label12.Location = new System.Drawing.Point(34, 534);
+            this.label12.Location = new System.Drawing.Point(35, 526);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(75, 24);
             this.label12.TabIndex = 40;
@@ -259,7 +261,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 12F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label6.Location = new System.Drawing.Point(323, 534);
+            this.label6.Location = new System.Drawing.Point(324, 526);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(172, 24);
             this.label6.TabIndex = 44;
@@ -268,8 +270,9 @@
             // rbActivo
             // 
             this.rbActivo.AutoSize = true;
+            this.rbActivo.Checked = true;
             this.rbActivo.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
-            this.rbActivo.Location = new System.Drawing.Point(332, 573);
+            this.rbActivo.Location = new System.Drawing.Point(333, 565);
             this.rbActivo.Name = "rbActivo";
             this.rbActivo.Size = new System.Drawing.Size(84, 24);
             this.rbActivo.TabIndex = 45;
@@ -281,7 +284,7 @@
             // 
             this.rbPasivo.AutoSize = true;
             this.rbPasivo.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
-            this.rbPasivo.Location = new System.Drawing.Point(446, 573);
+            this.rbPasivo.Location = new System.Drawing.Point(447, 565);
             this.rbPasivo.Name = "rbPasivo";
             this.rbPasivo.Size = new System.Drawing.Size(87, 24);
             this.rbPasivo.TabIndex = 46;
@@ -291,16 +294,16 @@
             // 
             // txtdescripcion
             // 
-            this.txtdescripcion.Location = new System.Drawing.Point(36, 225);
+            this.txtdescripcion.Location = new System.Drawing.Point(39, 231);
             this.txtdescripcion.Name = "txtdescripcion";
-            this.txtdescripcion.Size = new System.Drawing.Size(511, 71);
+            this.txtdescripcion.Size = new System.Drawing.Size(225, 62);
             this.txtdescripcion.TabIndex = 47;
             this.txtdescripcion.Text = "";
             // 
             // txtStock
             // 
             this.txtStock.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtStock.Location = new System.Drawing.Point(38, 573);
+            this.txtStock.Location = new System.Drawing.Point(39, 565);
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(217, 27);
             this.txtStock.TabIndex = 48;
@@ -310,11 +313,23 @@
             0,
             0});
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 12F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label7.Location = new System.Drawing.Point(313, 195);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(120, 24);
+            this.label7.TabIndex = 49;
+            this.label7.Text = "Categoria:";
+            // 
             // FrmRegistrarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(628, 743);
+            this.ClientSize = new System.Drawing.Size(628, 729);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.txtStock);
             this.Controls.Add(this.txtdescripcion);
             this.Controls.Add(this.rbPasivo);
@@ -377,5 +392,6 @@
         private System.Windows.Forms.RadioButton rbPasivo;
         private System.Windows.Forms.RichTextBox txtdescripcion;
         private System.Windows.Forms.NumericUpDown txtStock;
+        private System.Windows.Forms.Label label7;
     }
 }

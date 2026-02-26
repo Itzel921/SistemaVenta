@@ -28,7 +28,7 @@ namespace CapaDatos
 
         public DataTable Listar()
         {
-            DataTable resul = new DataTable("producto");
+            DataTable resul = new DataTable("Producto");
             SqlConnection conexion = new SqlConnection();
 
             try
@@ -37,7 +37,7 @@ namespace CapaDatos
                 conexion.ConnectionString = Conexion.Conn;
 
                 // Configurar el comando para ejecutar el stored procedure
-                SqlCommand Cmd = new SqlCommand("SPListar_producto", conexion);
+                SqlCommand Cmd = new SqlCommand("SPListar_Producto", conexion);
                 Cmd.CommandType = CommandType.StoredProcedure;
 
                 // Usar SqlDataAdapter para llenar el DataTable con los resultados del SP
@@ -73,7 +73,7 @@ namespace CapaDatos
                 conexion.Open();
 
                 // Configurar el comando para ejecutar el stored procedure
-                SqlCommand Cmd = new SqlCommand("SPGuardar_producto", conexion);
+                SqlCommand Cmd = new SqlCommand("SPGuardar_Producto", conexion);
                 Cmd.CommandType = CommandType.StoredProcedure;
 
                 // Agregar parámetros del stored procedure
@@ -176,7 +176,7 @@ namespace CapaDatos
                 Cmd.CommandType = CommandType.StoredProcedure;
 
                 // Agregar parámetro del stored procedure (solo necesita el ID)
-                Cmd.Parameters.AddWithValue("@idcategoria", cat.IdCategoria);
+                Cmd.Parameters.AddWithValue("@idcategoria", prod.IdCategoria);
 
                 // Ejecutar el stored procedure
                 // ExecuteNonQuery() retorna el número de filas afectadas (debe ser 1)
