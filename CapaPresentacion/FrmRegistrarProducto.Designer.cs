@@ -379,10 +379,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dtfechaingreso;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DateTimePicker dtfechavencimiento;
         private System.Windows.Forms.Label label4;
         public System.Windows.Forms.TextBox txtpreciocompra;
         private System.Windows.Forms.Label label10;
@@ -390,11 +388,13 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.RadioButton rbactivo;
-        private System.Windows.Forms.RadioButton rbinactivo;
-        private System.Windows.Forms.RichTextBox txtdescripcion;
-        private System.Windows.Forms.NumericUpDown txtcantidad;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cboidcategoria;
+        public System.Windows.Forms.RichTextBox txtdescripcion;
+        public System.Windows.Forms.DateTimePicker dtfechaingreso;
+        public System.Windows.Forms.DateTimePicker dtfechavencimiento;
+        public System.Windows.Forms.NumericUpDown txtcantidad;
+        public System.Windows.Forms.ComboBox cboidcategoria;
+        public System.Windows.Forms.RadioButton rbactivo;
+        public System.Windows.Forms.RadioButton rbinactivo;
     }
 }

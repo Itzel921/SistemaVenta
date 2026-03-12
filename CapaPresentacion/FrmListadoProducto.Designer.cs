@@ -53,6 +53,7 @@
             this.btneliminar.TabIndex = 12;
             this.btneliminar.Text = "&Eliminar";
             this.btneliminar.UseVisualStyleBackColor = true;
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
             // 
             // btneditar
             // 
@@ -62,6 +63,7 @@
             this.btneditar.TabIndex = 11;
             this.btneditar.Text = "&Editar";
             this.btneditar.UseVisualStyleBackColor = true;
+            this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
             // 
             // btnnuevo
             // 
@@ -102,6 +104,7 @@
             this.btnsalir.TabIndex = 3;
             this.btnsalir.Text = "&Salir";
             this.btnsalir.UseVisualStyleBackColor = true;
+            this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
             // 
             // btnbuscar
             // 

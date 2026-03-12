@@ -115,6 +115,19 @@ AS
 
 
 
+
+CREATE PROCEDURE SPBuscar_Producto_nombre
+@nombre varchar(30)
+AS
+	SELECT P.idproducto, P.codigo, P.nombre, P.descripcion, 
+	P.f_ingreso, P.f_vencimiento, P.precio_compra, 
+	P.precio_venta, P.stock, P.estado, 
+	P.id_categoria, C.descripcion AS categoria
+	FROM categoria C INNER JOIN producto P ON C.idcategoria = P.id_categoria
+	WHERE P.nombre LIKE @nombre + '%'
+	ORDER BY P.idproducto
+
+
 CREATE PROCEDURE SPGuardar_Producto
 	@idproducto int output,
 	@codigo varchar(30),
@@ -172,3 +185,6 @@ CREATE PROCEDURE SPEliminar_Producto
 AS
 	DELETE FROM producto WHERE idproducto = @idproducto
 GO
+
+
+SELECT * FROM producto

@@ -54,7 +54,18 @@ namespace CapaPresentacion
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
-            
+
+            string estado = "";
+            if (rbactivo.Checked == true)
+            {
+                estado = "ACTIVO";
+
+            }
+            else
+            {
+                estado = "INACTIVO";
+            }
+
             try
             {
                 if (this.txtnombre.Text == string.Empty || this.txtcodigo.Text == string.Empty)
