@@ -6,8 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
-using System.Data.SqlClient;
+
 
 
 namespace CapaNegocio
@@ -42,9 +41,6 @@ namespace CapaNegocio
             Datos.IdCategoria = idcategoria;
             return Datos.Eliminar(Datos);
         }
-
-        // MÉTODO PARA BUSCAR CLIENTES POR NOMBRE
-        // Parámetro: texto a buscar en el nombre
 
         public static DataTable BuscarNombre(string buscar)
         {

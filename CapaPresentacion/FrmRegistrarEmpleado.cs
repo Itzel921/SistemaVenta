@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaNegocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,34 +9,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using CapaNegocio;
-
 namespace CapaPresentacion
 {
-    public partial class FrmRegistrarCliente : Form
+    public partial class FrmRegistrarEmpleado : Form
     {
+
         public bool Insert = false;
         public bool Edit = false;
 
-        public FrmRegistrarCliente()
+        public FrmRegistrarEmpleado()
         {
             InitializeComponent();
         }
 
-        private void FrmRegistrarCliente_Load(object sender, EventArgs e)
+        private void FrmRegistrarEmpleado_Load(object sender, EventArgs e)
         {
             this.Top = 150;
             this.Left = 150;
         }
-
-
-        private void btncancelar_Click(object sender, EventArgs e)
-        {
-            FrmListadoCliente form = new FrmListadoCliente();
-            form.Show();
-            this.Hide();
-        }
-
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
@@ -50,43 +41,52 @@ namespace CapaPresentacion
                 estado = "INACTIVO";
             }
 
-            try { 
+            try
+            {
 
                 if (this.txtnombre.Text == string.Empty || this.txtapellidos.Text == string.Empty)
                 {
-                    MessageBox.Show("Ingrese los datos del cliente", "Sistema de Ventas", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Ingrese los datos del empleado", "Sistema de Ventas", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
                 else
                 {
                     if (this.Insert == true)
                     {
-                        CNCliente.Guardar(this.txtnombre.Text, this.txtapellidos.Text, this.txtrfc.Text, this.txtdni.Text, this.txttelefono.Text, estado);
+                        CNEmpleado.Guardar(this.txtnombre.Text, this.txtapellidos.Text, this.txtdni.Text, this.txttelefono.Text, this.txtdireccion.Text, estado);
 
                         MessageBox.Show("Cliente registrado correctamente", "Sistema de Ventas", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
 
                     else if (this.Edit == true)
                     {
-                        CNCliente.Editar(Convert.ToInt32(this.txtidcliente.Text), this.txtnombre.Text, this.txtapellidos.Text, this.txtrfc.Text, this.txtdni.Text, this.txttelefono.Text, estado);
+                        CNEmpleado.Editar(Convert.ToInt32(this.txtidempleado.Text), this.txtnombre.Text, this.txtapellidos.Text, this.txtdni.Text, this.txttelefono.Text, this.txtdireccion.Text, estado);
                         MessageBox.Show("Cliente editado correctamente", "Sistema de Ventas", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
 
                     this.Insert = false;
                     this.Edit = false;
 
-                    FrmListadoCliente form = new FrmListadoCliente();
+                    FrmListadoEmpleado form = new FrmListadoEmpleado();
                     form.Show();
                     this.Hide();
 
                 }
             }
-            catch(Exception ex){
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
 
         }
 
-        
+        private void btncancelar_Click(object sender, EventArgs e)
+        {
+            FrmListadoEmpleado form = new FrmListadoEmpleado();
+            form.Show();
+            this.Hide();
+        }
+
     }
+
 }

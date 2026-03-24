@@ -187,4 +187,149 @@ AS
 GO
 
 
-SELECT * FROM producto
+
+
+
+
+----------------------------------------------------------
+------------------------PROVEEDOR-------------------------
+----------------------------------------------------------
+
+
+CREATE proc splistar_proveedor
+as
+	SELECT * FROM proveedor
+GO
+
+
+
+CREATE proc spbuscar_proveedor_razonsocial
+@razonsocial VARCHAR(30)
+AS
+	SELECT * FROM proveedor WHERE razonsocial like @razonsocial+'%'
+GO
+
+
+CREATE proc spbuscar_proveedor_dni
+@dni VARCHAR(10)
+AS
+	SELECT * FROM proveedor WHERE dni like @dni+'%'
+GO
+
+
+
+CREATE proc spguardar_proveedor
+	@idproveedor int output,
+	@razonsocial VARCHAR(20),
+	@dni VARCHAR (10),
+	@rfc VARCHAR (13),
+	@telefono CHAR(15),
+	@direccion VARCHAR (50),
+	@estado VARCHAR(20)
+AS
+
+	INSERT INTO proveedor (razonsocial, dni, rfc, telefono, direccion, estado)
+	VALUES (@razonsocial, @dni, @rfc, @telefono, @direccion, @estado)
+GO
+
+
+
+
+CREATE proc speditar_proveedor
+	@idproveedor INT,
+	@razonsocial VARCHAR(20),
+	@dni VARCHAR (10),
+	@rfc VARCHAR (13),
+	@telefono CHAR(15),
+	@direccion VARCHAR (50),
+	@estado VARCHAR(20)
+AS
+
+	update proveedor set razonsocial=@razonsocial, dni=@dni, rfc=@rfc, telefono=@telefono, direccion=@direccion, estado=@estado
+	where idproveedor=@idproveedor
+
+GO
+
+
+
+CREATE proc speliminar_proveedor
+	@idproveedor int
+AS
+	DELETE FROM proveedor WHERE idproveedor=@idproveedor
+GO
+
+
+
+
+
+
+----------------------------------------------------------
+-------------------------EMPLEADO-------------------------
+----------------------------------------------------------
+
+CREATE proc SPListar_empleado
+AS 
+	SELECT * FROM empleado
+GO
+
+
+CREATE proc SPBuscar_empleado_dni
+@dni VARCHAR(8)
+AS
+	SELECT * FROM empleado WHERE dni LIKE @dni+'%'
+GO
+
+
+CREATE proc SPBuscar_empleado_nombre
+@nombre VARCHAR(8)
+AS
+	SELECT * FROM empleado WHERE nombre LIKE @nombre+'%'
+GO
+
+
+CREATE proc SPGuardar_empleado
+@idempleado INT OUTPUT,
+@nombre VARCHAR(20),
+@apellidos VARCHAR(20),
+@dni VARCHAR(8),
+@telefono VARCHAR(9),
+@direccion VARCHAR(50),
+@estado VARCHAR(10)
+AS
+		INSERT INTO empleado 
+		VALUES (@nombre, @apellidos, @dni, @telefono, @direccion, @estado)
+GO
+
+
+
+CREATE proc SPEditar_empleado
+@idempleado INT OUTPUT,
+@nombre VARCHAR(20),
+@apellidos VARCHAR(20),
+@dni VARCHAR(8),
+@telefono VARCHAR(9),
+@direccion VARCHAR(50),
+@estado VARCHAR(10)
+AS
+		UPDATE empleado SET nombre=@nombre, apellidos=@apellidos, dni=@dni, telefono=@telefono, direccion=@direccion, estado=@estado
+		WHERE idempleado = @idempleado
+GO
+
+
+
+CREATE proc SPEliminar_empleado
+@idempleado INT
+AS
+	DELETE FROM empleado WHERE idempleado=@idempleado
+GO
+
+
+
+
+
+
+
+
+
+
+SELECT * FROM proveedor

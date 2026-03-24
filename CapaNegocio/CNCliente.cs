@@ -13,7 +13,13 @@ namespace CapaNegocio
     // Actúa como intermediario entre la capa de presentación y la capa de datos
     public class CNCliente
     {
-        
+
+        public static DataTable Listar()
+        {
+            return new CDCliente().Listar();
+        }
+
+
         public static string Guardar(string nombre, string apellidos, string dni, string rfc, string telefono, string estado)
         {
             CDCliente Datos = new CDCliente();
@@ -41,10 +47,6 @@ namespace CapaNegocio
             return Datos.Editar(Datos);
         }
 
-        public static DataTable Listar()
-        {
-            return new CDCliente().Listar();
-        }
 
         // MÉTODO PARA ELIMINAR UN CLIENTE
         // Parámetro: id del cliente a eliminar
