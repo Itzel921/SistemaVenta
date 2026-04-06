@@ -329,7 +329,144 @@ GO
 
 
 
+----------------------------------------------------------
+-------------------------USUARIO--------------------------
+----------------------------------------------------------
+
+
+-------------BUSCAR USUARIO POR NOMBRE------------------
+CREATE PROC spbuscar_usuario_nombre
+	@nombre VARCHAR(20)
+AS
+SELECT 
+	usuario.idusuario,
+	usuario.idempleado,
+	empleado.nombre,
+	empleado.apellidos,
+	usuario.usuario,
+	usuario.pass,
+	usuario.acceso,
+	usuario.estado
+FROM usuario
+	INNER JOIN empleado ON usuario.idempleado = empleado.idempleado
+	WHERE empleado.nombre LIKE @nombre + '%'
+GO
 
 
 
-SELECT * FROM proveedor
+-------------BUSCAR USUARIO POR NOMBRE DE USUARIO------------------
+CREATE PROC spbuscar_usuario_nombreusuario
+	@nombreusuario VARCHAR(20)
+AS
+SELECT 
+	usuario.idusuario,
+	usuario.idempleado,
+	empleado.nombre,
+	empleado.apellidos,
+	usuario.usuario,
+	usuario.pass,
+	usuario.acceso,
+	usuario.estado
+FROM usuario
+	INNER JOIN empleado ON usuario.idempleado = empleado.idempleado
+	WHERE usuario LIKE @nombreusuario + '%'
+GO
+
+
+
+-------------GUARDAR USUARIO------------------
+CREATE PROC spguardar_usuario
+	@idusuario INT OUTPUT,
+	@usuario VARCHAR(20),
+	@pass VARCHAR(20),
+	@acceso VARCHAR(20),
+	@estado VARCHAR(10),
+	@idempleado INT
+AS
+INSERT INTO usuario
+	VALUES (
+		@usuario,
+		@pass,
+		@acceso,
+		@estado,
+		@idempleado)
+GO
+
+
+-----------EDITAR USUARIO-----------
+CREATE PROC speditar_usuario
+    @idusuario INT,
+	@usuario VARCHAR(20),
+	@pass VARCHAR(20),
+	@acceso VARCHAR(20),
+	@estado VARCHAR(10),
+	@idempleado INT
+AS
+	UPDATE usuario
+SET 
+	usuario = @usuario,
+	pass = @pass,
+	acceso = @acceso,
+	estado = @estado,
+	idempleado = @idempleado
+	WHERE idusuario = @idusuario
+GO
+
+
+----ELIMINAR USUARIO-----------
+CREATE PROC speliminar_usuario
+@idusuario INT
+AS
+DELETE
+	FROM usuario
+	WHERE idusuario = @idusuario
+GO
+
+
+----LISTAR USUARIO-------------
+CREATE PROC splistar_usuario
+AS
+SELECT 
+	usuario.idusuario,
+	usuario.idempleado,
+	empleado.nombre,
+	empleado.apellidos,
+	usuario.usuario,
+	usuario.pass,
+	usuario.acceso,
+	usuario.estado
+FROM usuario
+	INNER JOIN empleado ON usuario.idempleado = empleado.idempleado
+GO
+
+
+------------INICIAR SESIÓN---------------
+CREATE PROC spinicio_sesion
+    @usuario VARCHAR(20),
+	@password VARCHAR(20)
+AS
+SELECT 
+	usuario.idusuario,
+	usuario.idempleado,
+	empleado.nombre,
+	empleado.apellidos,
+	usuario.usuario,
+	usuario.pass,
+	usuario.acceso,
+	usuario.estado
+FROM usuario
+	INNER JOIN empleado ON usuario.idempleado = empleado.idempleado
+	WHERE usuario = @usuario
+		AND pass = @password
+		AND usuario.estado = 'ACTIVO'
+GO
+
+
+
+
+
+
+
+
+
+SELECT * FROM empleado
