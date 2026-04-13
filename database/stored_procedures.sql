@@ -469,4 +469,4 @@ GO
 
 
 
-SELECT * FROM empleado
+SELECT * FROM usuario
