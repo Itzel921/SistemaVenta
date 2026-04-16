@@ -61,12 +61,22 @@ namespace CapaPresentacion.Properties {
         }
         
         /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        ///   Busca un recurso adaptado de tipo System.Resources.ResXFileRef.
         /// </summary>
-        internal static System.Drawing.Bitmap logo {
+        internal static System.Resources.ResXFileRef logo {
             get {
                 object obj = ResourceManager.GetObject("logo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ((System.Resources.ResXFileRef)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Resources.ResXFileRef.
+        /// </summary>
+        internal static System.Resources.ResXFileRef logo1 {
+            get {
+                object obj = ResourceManager.GetObject("logo1", resourceCulture);
+                return ((System.Resources.ResXFileRef)(obj));
             }
         }
     }
