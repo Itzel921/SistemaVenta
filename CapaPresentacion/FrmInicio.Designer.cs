@@ -177,7 +177,7 @@
             this.mnualmacen.MaximumSize = new System.Drawing.Size(214, 120);
             this.mnualmacen.MinimumSize = new System.Drawing.Size(214, 37);
             this.mnualmacen.Name = "mnualmacen";
-            this.mnualmacen.Size = new System.Drawing.Size(214, 43);
+            this.mnualmacen.Size = new System.Drawing.Size(214, 45);
             this.mnualmacen.TabIndex = 4;
             // 
             // categoria
@@ -193,6 +193,7 @@
             this.categoria.TabIndex = 0;
             this.categoria.Text = "Categoria";
             this.categoria.UseVisualStyleBackColor = false;
+            this.categoria.Click += new System.EventHandler(this.categoria_Click);
             // 
             // producto
             // 
@@ -207,6 +208,7 @@
             this.producto.TabIndex = 1;
             this.producto.Text = "Producto";
             this.producto.UseVisualStyleBackColor = false;
+            this.producto.Click += new System.EventHandler(this.producto_Click);
             // 
             // btnalmacen
             // 
@@ -230,11 +232,11 @@
             this.mnucompra.Controls.Add(this.btnproveedor);
             this.mnucompra.Controls.Add(this.btngenerarcompra);
             this.mnucompra.Controls.Add(this.btncompras);
-            this.mnucompra.Location = new System.Drawing.Point(3, 155);
+            this.mnucompra.Location = new System.Drawing.Point(3, 157);
             this.mnucompra.MaximumSize = new System.Drawing.Size(214, 120);
             this.mnucompra.MinimumSize = new System.Drawing.Size(214, 37);
             this.mnucompra.Name = "mnucompra";
-            this.mnucompra.Size = new System.Drawing.Size(214, 43);
+            this.mnucompra.Size = new System.Drawing.Size(214, 45);
             this.mnucompra.TabIndex = 7;
             // 
             // btnproveedor
@@ -250,6 +252,7 @@
             this.btnproveedor.TabIndex = 2;
             this.btnproveedor.Text = "Proveedor";
             this.btnproveedor.UseVisualStyleBackColor = false;
+            this.btnproveedor.Click += new System.EventHandler(this.btnproveedor_Click);
             // 
             // btngenerarcompra
             // 
@@ -287,11 +290,11 @@
             this.mnuventa.Controls.Add(this.btnclientes);
             this.mnuventa.Controls.Add(this.btngenerarventa);
             this.mnuventa.Controls.Add(this.btnventas);
-            this.mnuventa.Location = new System.Drawing.Point(3, 204);
+            this.mnuventa.Location = new System.Drawing.Point(3, 208);
             this.mnuventa.MaximumSize = new System.Drawing.Size(214, 120);
             this.mnuventa.MinimumSize = new System.Drawing.Size(214, 37);
             this.mnuventa.Name = "mnuventa";
-            this.mnuventa.Size = new System.Drawing.Size(214, 43);
+            this.mnuventa.Size = new System.Drawing.Size(214, 45);
             this.mnuventa.TabIndex = 6;
             // 
             // btnclientes
@@ -307,6 +310,7 @@
             this.btnclientes.TabIndex = 2;
             this.btnclientes.Text = "Clientes";
             this.btnclientes.UseVisualStyleBackColor = false;
+            this.btnclientes.Click += new System.EventHandler(this.btnclientes_Click);
             // 
             // btngenerarventa
             // 
@@ -344,11 +348,11 @@
             this.mnuconfiguraciones.Controls.Add(this.btnusuarios);
             this.mnuconfiguraciones.Controls.Add(this.btnempleados);
             this.mnuconfiguraciones.Controls.Add(this.btnconfiguraciones);
-            this.mnuconfiguraciones.Location = new System.Drawing.Point(3, 253);
+            this.mnuconfiguraciones.Location = new System.Drawing.Point(3, 259);
             this.mnuconfiguraciones.MaximumSize = new System.Drawing.Size(214, 120);
             this.mnuconfiguraciones.MinimumSize = new System.Drawing.Size(214, 37);
             this.mnuconfiguraciones.Name = "mnuconfiguraciones";
-            this.mnuconfiguraciones.Size = new System.Drawing.Size(214, 43);
+            this.mnuconfiguraciones.Size = new System.Drawing.Size(214, 45);
             this.mnuconfiguraciones.TabIndex = 8;
             // 
             // btnusuarios
@@ -364,6 +368,7 @@
             this.btnusuarios.TabIndex = 2;
             this.btnusuarios.Text = "Usuarios";
             this.btnusuarios.UseVisualStyleBackColor = false;
+            this.btnusuarios.Click += new System.EventHandler(this.btnusuarios_Click);
             // 
             // btnempleados
             // 
@@ -402,7 +407,7 @@
             this.mnuconsultas.Controls.Add(this.btncomprafechas);
             this.mnuconsultas.Controls.Add(this.btnventafechas);
             this.mnuconsultas.Controls.Add(this.btnconsultas);
-            this.mnuconsultas.Location = new System.Drawing.Point(3, 302);
+            this.mnuconsultas.Location = new System.Drawing.Point(3, 310);
             this.mnuconsultas.MaximumSize = new System.Drawing.Size(214, 160);
             this.mnuconsultas.MinimumSize = new System.Drawing.Size(214, 37);
             this.mnuconsultas.Name = "mnuconsultas";
@@ -474,7 +479,7 @@
             this.mnureportes.Controls.Add(this.btnreportecliente);
             this.mnureportes.Controls.Add(this.btnreporteproducto);
             this.mnureportes.Controls.Add(this.btnreportes);
-            this.mnureportes.Location = new System.Drawing.Point(3, 351);
+            this.mnureportes.Location = new System.Drawing.Point(3, 359);
             this.mnureportes.MaximumSize = new System.Drawing.Size(214, 160);
             this.mnureportes.MinimumSize = new System.Drawing.Size(214, 37);
             this.mnureportes.Name = "mnureportes";

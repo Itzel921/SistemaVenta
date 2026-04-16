@@ -233,5 +233,77 @@ namespace CapaPresentacion
             tmrsubmenu.Start();
 
         }
+
+        private void producto_Click(object sender, EventArgs e)
+        {
+            FrmListadoProducto frm = new FrmListadoProducto();
+            frm.MdiParent = this;
+            frm.Show();
+            frm.BringToFront();
+
+            mnualmacen.Width = 214;
+            mnualmacen.Height = 37;
+
+        }
+
+        private void categoria_Click(object sender, EventArgs e)
+        {
+            FrmListadoCategoria frm = new FrmListadoCategoria();
+            frm.MdiParent = this;
+            frm.Show();
+            frm.BringToFront();
+
+            mnualmacen.Width = 214;
+            mnualmacen.Height = 37;
+
+        }
+
+        private void btnclientes_Click(object sender, EventArgs e)
+        {
+            FrmListadoCliente frm = new FrmListadoCliente();
+            frm.MdiParent = this;
+            frm.Show();
+            frm.BringToFront();
+
+            mnuventa.Width = 214;
+            mnuventa.Height = 37;
+
+        }
+
+        private void btnproveedor_Click(object sender, EventArgs e)
+        {
+            FrmListadoProveedor frm = new FrmListadoProveedor();
+            frm.MdiParent = this;
+            frm.Show();
+            frm.BringToFront();
+
+            mnucompra.Width = 214;
+            mnucompra.Height = 37;
+
+        }
+
+        private void btnempleados_Click(object sender, EventArgs e)
+        {
+            FrmListadoEmpleado frm = new FrmListadoEmpleado();
+            frm.MdiParent = this;
+            frm.Show();
+            frm.BringToFront();
+
+            mnuconfiguraciones.Width = 214;
+            mnuconfiguraciones.Height = 37;
+
+        }
+
+        private void btnusuarios_Click(object sender, EventArgs e)
+        {
+            FrmListadoUsuario frm = new FrmListadoUsuario();
+            frm.MdiParent = this;
+            frm.Show();
+            frm.BringToFront();
+
+            mnuconfiguraciones.Width = 214;
+            mnuconfiguraciones.Height = 37;
+
+        }
     }
 }
