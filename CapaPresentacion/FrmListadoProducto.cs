@@ -20,8 +20,8 @@ namespace CapaPresentacion
 
         private void FrmListadoProducto_Load(object sender, EventArgs e)
         {
-            this.Top = 100;
-            this.Left = 100;
+            this.Top = 0;
+            this.Left = 0;
 
             Mostrar();
         }

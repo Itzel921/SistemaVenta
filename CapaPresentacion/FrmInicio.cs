@@ -12,6 +12,7 @@ namespace CapaPresentacion
 {
     public partial class FrmInicio : Form
     {
+        public string NombreUsuarioLogueado { get; set; }
         string opcion;
         bool expanderalmacen;
         bool expandercompras;
@@ -304,6 +305,25 @@ namespace CapaPresentacion
             mnuconfiguraciones.Width = 214;
             mnuconfiguraciones.Height = 37;
 
+        }
+
+        private void FrmInicio_Load(object sender, EventArgs e)
+        {
+            lblUsuarioLogueado.Text = NombreUsuarioLogueado;
+        }
+
+        private void btnCerrarSesión_Click(object sender, EventArgs e)
+        {
+            // Preguntamos al usuario si realmente quiere salir
+            if (MessageBox.Show("¿Está seguro de cerrar sesión?", "Sistema ventas",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                this.Close(); // Cierra el FrmInicio actual
+
+                // Volvemos a mostrar el formulario de Login
+                FrmLogin login = new FrmLogin();
+                login.Show();
+            }
         }
     }
 }

@@ -178,6 +178,7 @@
             this.Controls.Add(this.dlistado);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmListadoProducto";
             this.Text = "FrmListadoProducto";
             this.Load += new System.EventHandler(this.FrmListadoProducto_Load);

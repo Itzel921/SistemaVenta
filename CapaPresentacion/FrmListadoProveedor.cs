@@ -21,8 +21,8 @@ namespace CapaPresentacion
         private void FrmListadoProveedor_Load(object sender, EventArgs e)
         {
             
-            this.Top = 150;
-            this.Left = 100;
+            this.Top = 0;
+            this.Left = 0;
 
             Mostrar();
             
