@@ -47,7 +47,7 @@
             // 
             this.btneliminar.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
             this.btneliminar.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btneliminar.Location = new System.Drawing.Point(455, 345);
+            this.btneliminar.Location = new System.Drawing.Point(451, 452);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(107, 37);
             this.btneliminar.TabIndex = 12;
@@ -59,7 +59,7 @@
             // 
             this.btneditar.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
             this.btneditar.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btneditar.Location = new System.Drawing.Point(99, 345);
+            this.btneditar.Location = new System.Drawing.Point(95, 452);
             this.btneditar.Name = "btneditar";
             this.btneditar.Size = new System.Drawing.Size(107, 37);
             this.btneditar.TabIndex = 11;
@@ -71,7 +71,7 @@
             // 
             this.btnnuevo.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnnuevo.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnnuevo.Location = new System.Drawing.Point(276, 345);
+            this.btnnuevo.Location = new System.Drawing.Point(272, 452);
             this.btnnuevo.Name = "btnnuevo";
             this.btnnuevo.Size = new System.Drawing.Size(107, 37);
             this.btnnuevo.TabIndex = 10;
@@ -98,11 +98,11 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dlistado.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dlistado.Location = new System.Drawing.Point(19, 176);
+            this.dlistado.Location = new System.Drawing.Point(85, 169);
             this.dlistado.Name = "dlistado";
             this.dlistado.RowHeadersWidth = 51;
             this.dlistado.RowTemplate.Height = 24;
-            this.dlistado.Size = new System.Drawing.Size(645, 139);
+            this.dlistado.Size = new System.Drawing.Size(508, 257);
             this.dlistado.TabIndex = 9;
             // 
             // panel1
@@ -119,11 +119,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label2.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.label2.Location = new System.Drawing.Point(14, 30);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(191, 24);
+            this.label2.Size = new System.Drawing.Size(221, 26);
             this.label2.TabIndex = 4;
             this.label2.Text = "Buscar Categoria";
             // 
@@ -165,7 +165,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
-            this.ClientSize = new System.Drawing.Size(692, 407);
+            this.ClientSize = new System.Drawing.Size(695, 524);
             this.Controls.Add(this.btneliminar);
             this.Controls.Add(this.btneditar);
             this.Controls.Add(this.btnnuevo);

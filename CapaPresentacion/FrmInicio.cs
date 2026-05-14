@@ -237,10 +237,7 @@ namespace CapaPresentacion
 
         private void producto_Click(object sender, EventArgs e)
         {
-            FrmListadoProducto frm = new FrmListadoProducto();
-            frm.MdiParent = this;
-            frm.Show();
-            frm.BringToFront();
+            AbrirFormulario(new FrmListadoProducto());
 
             mnualmacen.Width = 214;
             mnualmacen.Height = 37;
@@ -249,10 +246,7 @@ namespace CapaPresentacion
 
         private void categoria_Click(object sender, EventArgs e)
         {
-            FrmListadoCategoria frm = new FrmListadoCategoria();
-            frm.MdiParent = this;
-            frm.Show();
-            frm.BringToFront();
+            AbrirFormulario(new FrmListadoCategoria());
 
             mnualmacen.Width = 214;
             mnualmacen.Height = 37;
@@ -261,22 +255,16 @@ namespace CapaPresentacion
 
         private void btnclientes_Click(object sender, EventArgs e)
         {
-            FrmListadoCliente frm = new FrmListadoCliente();
-            frm.MdiParent = this;
-            frm.Show();
-            frm.BringToFront();
+            AbrirFormulario(new FrmListadoCliente());
 
-            mnuventa.Width = 214;
-            mnuventa.Height = 37;
+            mnualmacen.Width = 214;
+            mnualmacen.Height = 37;
 
         }
 
         private void btnproveedor_Click(object sender, EventArgs e)
         {
-            FrmListadoProveedor frm = new FrmListadoProveedor();
-            frm.MdiParent = this;
-            frm.Show();
-            frm.BringToFront();
+            AbrirFormulario(new FrmListadoProveedor());
 
             mnucompra.Width = 214;
             mnucompra.Height = 37;
@@ -285,10 +273,7 @@ namespace CapaPresentacion
 
         private void btnempleados_Click(object sender, EventArgs e)
         {
-            FrmListadoEmpleado frm = new FrmListadoEmpleado();
-            frm.MdiParent = this;
-            frm.Show();
-            frm.BringToFront();
+            AbrirFormulario(new FrmListadoEmpleado());
 
             mnuconfiguraciones.Width = 214;
             mnuconfiguraciones.Height = 37;
@@ -297,10 +282,7 @@ namespace CapaPresentacion
 
         private void btnusuarios_Click(object sender, EventArgs e)
         {
-            FrmListadoUsuario frm = new FrmListadoUsuario();
-            frm.MdiParent = this;
-            frm.Show();
-            frm.BringToFront();
+            AbrirFormulario(new FrmListadoUsuario());
 
             mnuconfiguraciones.Width = 214;
             mnuconfiguraciones.Height = 37;
@@ -324,6 +306,23 @@ namespace CapaPresentacion
                 FrmLogin login = new FrmLogin();
                 login.Show();
             }
+        }
+
+
+
+        private void AbrirFormulario(Form formulario)
+        {
+            // Cerramos todos los formularios hijos abiertos actualmente
+            foreach (Form hijo in this.MdiChildren)
+            {
+                hijo.Close();
+            }
+
+            // Configuramos y mostramos el nuevo formulario
+            formulario.MdiParent = this;
+            formulario.FormBorderStyle = FormBorderStyle.None; // Opcional: para que encaje mejor
+            formulario.Dock = DockStyle.Fill; // Opcional: para que ocupe todo el espacio central
+            formulario.Show();
         }
     }
 }

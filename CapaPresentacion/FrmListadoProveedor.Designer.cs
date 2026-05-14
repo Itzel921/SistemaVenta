@@ -53,7 +53,7 @@
             this.btneliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btneliminar.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
             this.btneliminar.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btneliminar.Location = new System.Drawing.Point(631, 437);
+            this.btneliminar.Location = new System.Drawing.Point(766, 430);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(112, 29);
             this.btneliminar.TabIndex = 12;
@@ -67,7 +67,7 @@
             this.btneditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btneditar.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
             this.btneditar.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btneditar.Location = new System.Drawing.Point(404, 437);
+            this.btneditar.Location = new System.Drawing.Point(539, 430);
             this.btneditar.Name = "btneditar";
             this.btneditar.Size = new System.Drawing.Size(112, 29);
             this.btneditar.TabIndex = 11;
@@ -81,7 +81,7 @@
             this.btnnuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnnuevo.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnnuevo.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnnuevo.Location = new System.Drawing.Point(184, 437);
+            this.btnnuevo.Location = new System.Drawing.Point(319, 430);
             this.btnnuevo.Name = "btnnuevo";
             this.btnnuevo.Size = new System.Drawing.Size(112, 29);
             this.btnnuevo.TabIndex = 10;
@@ -109,11 +109,11 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dlistado.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dlistado.Location = new System.Drawing.Point(33, 248);
+            this.dlistado.Location = new System.Drawing.Point(76, 248);
             this.dlistado.Name = "dlistado";
             this.dlistado.RowHeadersWidth = 51;
             this.dlistado.RowTemplate.Height = 24;
-            this.dlistado.Size = new System.Drawing.Size(880, 158);
+            this.dlistado.Size = new System.Drawing.Size(1050, 158);
             this.dlistado.TabIndex = 9;
             // 
             // panel1
@@ -124,7 +124,7 @@
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Location = new System.Drawing.Point(33, 64);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(880, 155);
+            this.panel1.Size = new System.Drawing.Size(1128, 155);
             this.panel1.TabIndex = 8;
             // 
             // btnsalir
@@ -133,7 +133,7 @@
             this.btnsalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnsalir.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnsalir.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnsalir.Location = new System.Drawing.Point(688, 89);
+            this.btnsalir.Location = new System.Drawing.Point(1000, 59);
             this.btnsalir.Name = "btnsalir";
             this.btnsalir.Size = new System.Drawing.Size(112, 35);
             this.btnsalir.TabIndex = 3;
@@ -147,7 +147,7 @@
             this.btnbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnbuscar.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnbuscar.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnbuscar.Location = new System.Drawing.Point(424, 89);
+            this.btnbuscar.Location = new System.Drawing.Point(854, 59);
             this.btnbuscar.Name = "btnbuscar";
             this.btnbuscar.Size = new System.Drawing.Size(112, 35);
             this.btnbuscar.TabIndex = 2;
@@ -157,17 +157,17 @@
             // 
             // txtbuscar
             // 
-            this.txtbuscar.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F);
-            this.txtbuscar.Location = new System.Drawing.Point(339, 49);
+            this.txtbuscar.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txtbuscar.Location = new System.Drawing.Point(314, 63);
             this.txtbuscar.Name = "txtbuscar";
-            this.txtbuscar.Size = new System.Drawing.Size(493, 27);
+            this.txtbuscar.Size = new System.Drawing.Size(493, 31);
             this.txtbuscar.TabIndex = 1;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.rbtndni);
             this.groupBox1.Controls.Add(this.rbtnrazonsocial);
-            this.groupBox1.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10F, System.Drawing.FontStyle.Bold);
+            this.groupBox1.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.groupBox1.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.groupBox1.Location = new System.Drawing.Point(17, 17);
             this.groupBox1.Name = "groupBox1";
@@ -181,7 +181,7 @@
             this.rbtndni.AutoSize = true;
             this.rbtndni.Location = new System.Drawing.Point(26, 72);
             this.rbtndni.Name = "rbtndni";
-            this.rbtndni.Size = new System.Drawing.Size(64, 24);
+            this.rbtndni.Size = new System.Drawing.Size(72, 28);
             this.rbtndni.TabIndex = 1;
             this.rbtndni.TabStop = true;
             this.rbtndni.Text = "DNI";
@@ -192,7 +192,7 @@
             this.rbtnrazonsocial.AutoSize = true;
             this.rbtnrazonsocial.Location = new System.Drawing.Point(26, 35);
             this.rbtnrazonsocial.Name = "rbtnrazonsocial";
-            this.rbtnrazonsocial.Size = new System.Drawing.Size(139, 24);
+            this.rbtnrazonsocial.Size = new System.Drawing.Size(160, 28);
             this.rbtnrazonsocial.TabIndex = 0;
             this.rbtnrazonsocial.TabStop = true;
             this.rbtnrazonsocial.Text = "Razón social";
@@ -214,7 +214,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
-            this.ClientSize = new System.Drawing.Size(944, 498);
+            this.ClientSize = new System.Drawing.Size(1195, 498);
             this.Controls.Add(this.btneliminar);
             this.Controls.Add(this.btneditar);
             this.Controls.Add(this.btnnuevo);

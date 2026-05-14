@@ -112,7 +112,7 @@ namespace CapaPresentacion
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Location = new System.Drawing.Point(22, 78);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(735, 155);
+            this.panel1.Size = new System.Drawing.Size(1001, 155);
             this.panel1.TabIndex = 1;
             // 
             // btnsalir
@@ -121,7 +121,7 @@ namespace CapaPresentacion
             this.btnsalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnsalir.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnsalir.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnsalir.Location = new System.Drawing.Point(537, 89);
+            this.btnsalir.Location = new System.Drawing.Point(874, 60);
             this.btnsalir.Name = "btnsalir";
             this.btnsalir.Size = new System.Drawing.Size(112, 35);
             this.btnsalir.TabIndex = 3;
@@ -135,7 +135,7 @@ namespace CapaPresentacion
             this.btnbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnbuscar.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnbuscar.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnbuscar.Location = new System.Drawing.Point(320, 89);
+            this.btnbuscar.Location = new System.Drawing.Point(739, 60);
             this.btnbuscar.Name = "btnbuscar";
             this.btnbuscar.Size = new System.Drawing.Size(112, 35);
             this.btnbuscar.TabIndex = 2;
@@ -144,10 +144,10 @@ namespace CapaPresentacion
             // 
             // txtbuscar
             // 
-            this.txtbuscar.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F);
-            this.txtbuscar.Location = new System.Drawing.Point(262, 50);
+            this.txtbuscar.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txtbuscar.Location = new System.Drawing.Point(292, 60);
             this.txtbuscar.Name = "txtbuscar";
-            this.txtbuscar.Size = new System.Drawing.Size(429, 27);
+            this.txtbuscar.Size = new System.Drawing.Size(429, 31);
             this.txtbuscar.TabIndex = 1;
             this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
             // 
@@ -155,11 +155,11 @@ namespace CapaPresentacion
             // 
             this.groupBox1.Controls.Add(this.rbtndni);
             this.groupBox1.Controls.Add(this.rbtnnombre);
-            this.groupBox1.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10F, System.Drawing.FontStyle.Bold);
+            this.groupBox1.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.groupBox1.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.groupBox1.Location = new System.Drawing.Point(17, 17);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(213, 107);
+            this.groupBox1.Size = new System.Drawing.Size(259, 107);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Críterio de búsqueda";
@@ -169,7 +169,7 @@ namespace CapaPresentacion
             this.rbtndni.AutoSize = true;
             this.rbtndni.Location = new System.Drawing.Point(26, 72);
             this.rbtndni.Name = "rbtndni";
-            this.rbtndni.Size = new System.Drawing.Size(64, 24);
+            this.rbtndni.Size = new System.Drawing.Size(72, 28);
             this.rbtndni.TabIndex = 1;
             this.rbtndni.TabStop = true;
             this.rbtndni.Text = "DNI";
@@ -180,7 +180,7 @@ namespace CapaPresentacion
             this.rbtnnombre.AutoSize = true;
             this.rbtnnombre.Location = new System.Drawing.Point(26, 35);
             this.rbtnnombre.Name = "rbtnnombre";
-            this.rbtnnombre.Size = new System.Drawing.Size(97, 24);
+            this.rbtnnombre.Size = new System.Drawing.Size(110, 28);
             this.rbtnnombre.TabIndex = 0;
             this.rbtnnombre.TabStop = true;
             this.rbtnnombre.Text = "Nombre";
@@ -206,11 +206,11 @@ namespace CapaPresentacion
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dlistado.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dlistado.Location = new System.Drawing.Point(22, 262);
+            this.dlistado.Location = new System.Drawing.Point(171, 256);
             this.dlistado.Name = "dlistado";
             this.dlistado.RowHeadersWidth = 51;
             this.dlistado.RowTemplate.Height = 24;
-            this.dlistado.Size = new System.Drawing.Size(735, 154);
+            this.dlistado.Size = new System.Drawing.Size(784, 250);
             this.dlistado.TabIndex = 2;
             // 
             // btnnuevo
@@ -219,7 +219,7 @@ namespace CapaPresentacion
             this.btnnuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnnuevo.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnnuevo.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnnuevo.Location = new System.Drawing.Point(112, 442);
+            this.btnnuevo.Location = new System.Drawing.Point(268, 549);
             this.btnnuevo.Name = "btnnuevo";
             this.btnnuevo.Size = new System.Drawing.Size(112, 33);
             this.btnnuevo.TabIndex = 4;
@@ -233,7 +233,7 @@ namespace CapaPresentacion
             this.btneditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btneditar.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
             this.btneditar.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btneditar.Location = new System.Drawing.Point(332, 442);
+            this.btneditar.Location = new System.Drawing.Point(488, 549);
             this.btneditar.Name = "btneditar";
             this.btneditar.Size = new System.Drawing.Size(112, 33);
             this.btneditar.TabIndex = 5;
@@ -247,7 +247,7 @@ namespace CapaPresentacion
             this.btneliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btneliminar.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
             this.btneliminar.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btneliminar.Location = new System.Drawing.Point(559, 442);
+            this.btneliminar.Location = new System.Drawing.Point(712, 549);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(112, 33);
             this.btneliminar.TabIndex = 6;
@@ -258,7 +258,7 @@ namespace CapaPresentacion
             // FrmListadoCliente
             // 
             this.BackColor = System.Drawing.Color.GhostWhite;
-            this.ClientSize = new System.Drawing.Size(799, 498);
+            this.ClientSize = new System.Drawing.Size(1065, 621);
             this.Controls.Add(this.btneliminar);
             this.Controls.Add(this.btneditar);
             this.Controls.Add(this.btnnuevo);
@@ -354,6 +354,7 @@ namespace CapaPresentacion
         private void txtbuscar_TextChanged(object sender, EventArgs e)
         {
             this.BuscarNombre();
+
         }
 
         private void FrmListadoCliente_Load_1(object sender, EventArgs e)
