@@ -127,7 +127,5 @@ namespace CapaPresentacion
             this.dlistado.DataSource = CNEmpleado.BuscarDni(txtbuscar.Text);
         }
 
-
-
     }
 }

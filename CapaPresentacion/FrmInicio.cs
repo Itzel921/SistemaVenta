@@ -123,7 +123,6 @@ namespace CapaPresentacion
                 }
             }
 
-
             if (opcion.Equals("mnuconsultas"))
             {
                 if (expanderconsultas)
@@ -277,7 +276,6 @@ namespace CapaPresentacion
 
             mnuconfiguraciones.Width = 214;
             mnuconfiguraciones.Height = 37;
-
         }
 
         private void btnusuarios_Click(object sender, EventArgs e)
@@ -308,8 +306,6 @@ namespace CapaPresentacion
             }
         }
 
-
-
         private void AbrirFormulario(Form formulario)
         {
             // Cerramos todos los formularios hijos abiertos actualmente
@@ -324,5 +320,7 @@ namespace CapaPresentacion
             formulario.Dock = DockStyle.Fill; // Opcional: para que ocupe todo el espacio central
             formulario.Show();
         }
+
+        
     }
 }
