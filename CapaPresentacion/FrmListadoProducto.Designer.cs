@@ -47,11 +47,11 @@
             // 
             // btneliminar
             // 
-            this.btneliminar.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btneliminar.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btneliminar.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btneliminar.Location = new System.Drawing.Point(626, 549);
+            this.btneliminar.Location = new System.Drawing.Point(761, 619);
             this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(115, 34);
+            this.btneliminar.Size = new System.Drawing.Size(157, 34);
             this.btneliminar.TabIndex = 12;
             this.btneliminar.Text = "&Eliminar";
             this.btneliminar.UseVisualStyleBackColor = true;
@@ -59,11 +59,11 @@
             // 
             // btneditar
             // 
-            this.btneditar.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btneditar.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btneditar.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btneditar.Location = new System.Drawing.Point(454, 549);
+            this.btneditar.Location = new System.Drawing.Point(547, 619);
             this.btneditar.Name = "btneditar";
-            this.btneditar.Size = new System.Drawing.Size(115, 34);
+            this.btneditar.Size = new System.Drawing.Size(157, 34);
             this.btneditar.TabIndex = 11;
             this.btneditar.Text = "&Editar";
             this.btneditar.UseVisualStyleBackColor = true;
@@ -71,11 +71,11 @@
             // 
             // btnnuevo
             // 
-            this.btnnuevo.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnnuevo.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btnnuevo.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnnuevo.Location = new System.Drawing.Point(297, 549);
+            this.btnnuevo.Location = new System.Drawing.Point(323, 619);
             this.btnnuevo.Name = "btnnuevo";
-            this.btnnuevo.Size = new System.Drawing.Size(115, 34);
+            this.btnnuevo.Size = new System.Drawing.Size(157, 34);
             this.btnnuevo.TabIndex = 10;
             this.btnnuevo.Text = "&Nuevo";
             this.btnnuevo.UseVisualStyleBackColor = true;
@@ -84,11 +84,11 @@
             // dlistado
             // 
             this.dlistado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dlistado.Location = new System.Drawing.Point(25, 239);
+            this.dlistado.Location = new System.Drawing.Point(42, 264);
             this.dlistado.Name = "dlistado";
             this.dlistado.RowHeadersWidth = 51;
             this.dlistado.RowTemplate.Height = 24;
-            this.dlistado.Size = new System.Drawing.Size(983, 255);
+            this.dlistado.Size = new System.Drawing.Size(1210, 303);
             this.dlistado.TabIndex = 9;
             // 
             // panel1
@@ -97,18 +97,18 @@
             this.panel1.Controls.Add(this.btnbuscar);
             this.panel1.Controls.Add(this.txtbuscar);
             this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Location = new System.Drawing.Point(25, 55);
+            this.panel1.Location = new System.Drawing.Point(29, 76);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(983, 155);
+            this.panel1.Size = new System.Drawing.Size(1210, 155);
             this.panel1.TabIndex = 8;
             // 
             // btnsalir
             // 
-            this.btnsalir.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnsalir.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btnsalir.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnsalir.Location = new System.Drawing.Point(857, 62);
+            this.btnsalir.Location = new System.Drawing.Point(1061, 59);
             this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Size = new System.Drawing.Size(93, 33);
+            this.btnsalir.Size = new System.Drawing.Size(129, 34);
             this.btnsalir.TabIndex = 3;
             this.btnsalir.Text = "&Salir";
             this.btnsalir.UseVisualStyleBackColor = true;
@@ -116,11 +116,11 @@
             // 
             // btnbuscar
             // 
-            this.btnbuscar.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnbuscar.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btnbuscar.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnbuscar.Location = new System.Drawing.Point(741, 61);
+            this.btnbuscar.Location = new System.Drawing.Point(904, 59);
             this.btnbuscar.Name = "btnbuscar";
-            this.btnbuscar.Size = new System.Drawing.Size(93, 33);
+            this.btnbuscar.Size = new System.Drawing.Size(129, 34);
             this.btnbuscar.TabIndex = 2;
             this.btnbuscar.Text = "&Buscar";
             this.btnbuscar.UseVisualStyleBackColor = true;
@@ -129,9 +129,9 @@
             // txtbuscar
             // 
             this.txtbuscar.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtbuscar.Location = new System.Drawing.Point(298, 62);
+            this.txtbuscar.Location = new System.Drawing.Point(391, 59);
             this.txtbuscar.Name = "txtbuscar";
-            this.txtbuscar.Size = new System.Drawing.Size(418, 27);
+            this.txtbuscar.Size = new System.Drawing.Size(461, 27);
             this.txtbuscar.TabIndex = 1;
             // 
             // groupBox1
@@ -142,7 +142,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.groupBox1.Location = new System.Drawing.Point(17, 17);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(264, 107);
+            this.groupBox1.Size = new System.Drawing.Size(340, 107);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Críterio de búsqueda";
@@ -184,7 +184,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1055, 618);
+            this.ClientSize = new System.Drawing.Size(1300, 710);
             this.Controls.Add(this.btneliminar);
             this.Controls.Add(this.btneditar);
             this.Controls.Add(this.btnnuevo);

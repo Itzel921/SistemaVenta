@@ -316,11 +316,28 @@ namespace CapaPresentacion
 
             // Configuramos y mostramos el nuevo formulario
             formulario.MdiParent = this;
-            formulario.FormBorderStyle = FormBorderStyle.None; // Opcional: para que encaje mejor
-            formulario.Dock = DockStyle.Fill; // Opcional: para que ocupe todo el espacio central
-            formulario.Show();
+            formulario.Dock = DockStyle.Fill; // hace que se pegue perfectamente desde la esquina superior izquierda cubriendo toda el área gris.
+            formulario.Show(); 
         }
 
-        
+        private void btnAtajoClientes_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new FrmListadoCliente());
+        }
+
+        private void btnAtajoEmpleados_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new FrmListadoEmpleado());
+        }
+
+        private void btnAtajoProductos_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new FrmListadoProducto());
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

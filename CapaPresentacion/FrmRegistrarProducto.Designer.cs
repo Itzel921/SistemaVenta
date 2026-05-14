@@ -358,8 +358,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "FrmRegistrarProducto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmRegistrarProducto";
             this.Load += new System.EventHandler(this.FrmRegistrarProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtcantidad)).EndInit();

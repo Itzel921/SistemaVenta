@@ -1955,7 +1955,7 @@
         oxhMEgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="button5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnStockMin.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DwAACw8BkvkDpQAABplJREFUeF7tmm1sU+cZhttfa1U6lVAidahMW1mTFG2oZVppx8b4aEendGpZv8ZE
@@ -1989,7 +1989,7 @@
         NLqHCZFcG94eNo7uvsl+2hcpUuRL438iuHbzvwCanQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="button4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnAtajoEmpleados.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DwAACw8BkvkDpQAAB6BJREFUeF7tmQtsU/cVxgMd7abBhLp2pSWP+cY4wSVOgiEvAgGauGFQILAQ+lgo
@@ -2028,7 +2028,7 @@
         TkSuQmCC
 </value>
   </data>
-  <data name="button3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnAtajoCompras.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DwAACw8BkvkDpQAABj1JREFUeF7tmV1sU+cZx0svuOgXu5o0gUZJHOKEENuBaQxIHBISUuI4IY7z5YDB
@@ -2061,7 +2061,7 @@
         AAAASUVORK5CYII=
 </value>
   </data>
-  <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnAtajoVentas.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DwAACw8BkvkDpQAABVhJREFUeF7tmn1M1HUcxymXrbnWVva4tM2d3nHtVBAS5AjkSRIQG13iFKaWKMdy
@@ -2090,7 +2090,7 @@
         8zfHOelYpIEKkwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnAtajoProductos.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DwAACw8BkvkDpQAABOBJREFUeF7tmV9o1WUYx6cFeR3kakLiOcOwJlvb3F/d8ZxNnOnCsLJtZztzYkxd
@@ -2117,7 +2117,7 @@
         +hvA42vpL2541AAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btnClientesBarra.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnAtajoClientes.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DgAACw4BQL7hQQAABPRJREFUeF7tll1MlXUcx6kLvNJebpsuURiiRU4DwXMOiFmH1yAkJwmCiSigaznH

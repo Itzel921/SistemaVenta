@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dlistado = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnsalir = new System.Windows.Forms.Button();
@@ -47,28 +47,28 @@
             // dlistado
             // 
             this.dlistado.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dlistado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dlistado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dlistado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dlistado.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dlistado.Location = new System.Drawing.Point(35, 255);
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dlistado.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dlistado.Location = new System.Drawing.Point(64, 255);
             this.dlistado.Name = "dlistado";
             this.dlistado.RowHeadersWidth = 51;
             this.dlistado.RowTemplate.Height = 24;
-            this.dlistado.Size = new System.Drawing.Size(735, 154);
+            this.dlistado.Size = new System.Drawing.Size(1012, 248);
             this.dlistado.TabIndex = 15;
             this.dlistado.DoubleClick += new System.EventHandler(this.dlistado_DoubleClick);
             // 
@@ -80,7 +80,7 @@
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Location = new System.Drawing.Point(35, 71);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(735, 155);
+            this.panel1.Size = new System.Drawing.Size(1060, 155);
             this.panel1.TabIndex = 14;
             // 
             // btnsalir
@@ -89,7 +89,7 @@
             this.btnsalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnsalir.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnsalir.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnsalir.Location = new System.Drawing.Point(537, 89);
+            this.btnsalir.Location = new System.Drawing.Point(929, 64);
             this.btnsalir.Name = "btnsalir";
             this.btnsalir.Size = new System.Drawing.Size(112, 35);
             this.btnsalir.TabIndex = 3;
@@ -103,7 +103,7 @@
             this.btnbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnbuscar.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnbuscar.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnbuscar.Location = new System.Drawing.Point(320, 89);
+            this.btnbuscar.Location = new System.Drawing.Point(785, 64);
             this.btnbuscar.Name = "btnbuscar";
             this.btnbuscar.Size = new System.Drawing.Size(112, 35);
             this.btnbuscar.TabIndex = 2;
@@ -113,21 +113,21 @@
             // 
             // txtbuscar
             // 
-            this.txtbuscar.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F);
-            this.txtbuscar.Location = new System.Drawing.Point(262, 50);
+            this.txtbuscar.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txtbuscar.Location = new System.Drawing.Point(314, 64);
             this.txtbuscar.Name = "txtbuscar";
-            this.txtbuscar.Size = new System.Drawing.Size(429, 27);
+            this.txtbuscar.Size = new System.Drawing.Size(429, 31);
             this.txtbuscar.TabIndex = 1;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.rbtndni);
             this.groupBox1.Controls.Add(this.rbtnnombre);
-            this.groupBox1.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10F, System.Drawing.FontStyle.Bold);
+            this.groupBox1.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.groupBox1.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.groupBox1.Location = new System.Drawing.Point(17, 17);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(213, 107);
+            this.groupBox1.Size = new System.Drawing.Size(268, 107);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Críterio de búsqueda";
@@ -137,7 +137,7 @@
             this.rbtndni.AutoSize = true;
             this.rbtndni.Location = new System.Drawing.Point(26, 72);
             this.rbtndni.Name = "rbtndni";
-            this.rbtndni.Size = new System.Drawing.Size(64, 24);
+            this.rbtndni.Size = new System.Drawing.Size(72, 28);
             this.rbtndni.TabIndex = 1;
             this.rbtndni.TabStop = true;
             this.rbtndni.Text = "DNI";
@@ -148,7 +148,7 @@
             this.rbtnnombre.AutoSize = true;
             this.rbtnnombre.Location = new System.Drawing.Point(26, 35);
             this.rbtnnombre.Name = "rbtnnombre";
-            this.rbtnnombre.Size = new System.Drawing.Size(97, 24);
+            this.rbtnnombre.Size = new System.Drawing.Size(110, 28);
             this.rbtnnombre.TabIndex = 0;
             this.rbtnnombre.TabStop = true;
             this.rbtnnombre.Text = "Nombre";
@@ -170,7 +170,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
-            this.ClientSize = new System.Drawing.Size(811, 436);
+            this.ClientSize = new System.Drawing.Size(1171, 536);
             this.Controls.Add(this.dlistado);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);

@@ -67,12 +67,12 @@
             this.btnconfiguraciones = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnCerrarSesión = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnClientesBarra = new System.Windows.Forms.Button();
+            this.btnStockMin = new System.Windows.Forms.Button();
+            this.btnAtajoEmpleados = new System.Windows.Forms.Button();
+            this.btnAtajoCompras = new System.Windows.Forms.Button();
+            this.btnAtajoVentas = new System.Windows.Forms.Button();
+            this.btnAtajoProductos = new System.Windows.Forms.Button();
+            this.btnAtajoClientes = new System.Windows.Forms.Button();
             this.tmrsubmenu = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnmaximizar)).BeginInit();
@@ -103,13 +103,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1356, 67);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // lblUsuarioLogueado
             // 
             this.lblUsuarioLogueado.AutoSize = true;
             this.lblUsuarioLogueado.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
             this.lblUsuarioLogueado.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lblUsuarioLogueado.Location = new System.Drawing.Point(854, 47);
+            this.lblUsuarioLogueado.Location = new System.Drawing.Point(1152, 44);
             this.lblUsuarioLogueado.Name = "lblUsuarioLogueado";
             this.lblUsuarioLogueado.Size = new System.Drawing.Size(175, 20);
             this.lblUsuarioLogueado.TabIndex = 4;
@@ -119,7 +120,7 @@
             // 
             this.btnmaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnmaximizar.Image = ((System.Drawing.Image)(resources.GetObject("btnmaximizar.Image")));
-            this.btnmaximizar.Location = new System.Drawing.Point(1297, 3);
+            this.btnmaximizar.Location = new System.Drawing.Point(1284, 3);
             this.btnmaximizar.Name = "btnmaximizar";
             this.btnmaximizar.Size = new System.Drawing.Size(25, 25);
             this.btnmaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -131,7 +132,7 @@
             // 
             this.btnminimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnminimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnminimizar.Image")));
-            this.btnminimizar.Location = new System.Drawing.Point(1266, 3);
+            this.btnminimizar.Location = new System.Drawing.Point(1253, 3);
             this.btnminimizar.Name = "btnminimizar";
             this.btnminimizar.Size = new System.Drawing.Size(25, 25);
             this.btnminimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -143,7 +144,7 @@
             // 
             this.btnrestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnrestaurar.Image = ((System.Drawing.Image)(resources.GetObject("btnrestaurar.Image")));
-            this.btnrestaurar.Location = new System.Drawing.Point(1297, 3);
+            this.btnrestaurar.Location = new System.Drawing.Point(1284, 3);
             this.btnrestaurar.Name = "btnrestaurar";
             this.btnrestaurar.Size = new System.Drawing.Size(25, 25);
             this.btnrestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -155,7 +156,7 @@
             // 
             this.btncerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btncerrar.Image = ((System.Drawing.Image)(resources.GetObject("btncerrar.Image")));
-            this.btncerrar.Location = new System.Drawing.Point(1328, 3);
+            this.btncerrar.Location = new System.Drawing.Point(1319, 3);
             this.btncerrar.Name = "btncerrar";
             this.btncerrar.Size = new System.Drawing.Size(25, 25);
             this.btncerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -587,12 +588,12 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.btnCerrarSesión);
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.btnClientesBarra);
+            this.panel2.Controls.Add(this.btnStockMin);
+            this.panel2.Controls.Add(this.btnAtajoEmpleados);
+            this.panel2.Controls.Add(this.btnAtajoCompras);
+            this.panel2.Controls.Add(this.btnAtajoVentas);
+            this.panel2.Controls.Add(this.btnAtajoProductos);
+            this.panel2.Controls.Add(this.btnAtajoClientes);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(262, 67);
             this.panel2.Name = "panel2";
@@ -620,113 +621,116 @@
             this.btnCerrarSesión.UseVisualStyleBackColor = false;
             this.btnCerrarSesión.Click += new System.EventHandler(this.btnCerrarSesión_Click);
             // 
-            // button5
+            // btnStockMin
             // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button5.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button5.Location = new System.Drawing.Point(534, -3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(115, 100);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Stock min.";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnStockMin.BackColor = System.Drawing.Color.Transparent;
+            this.btnStockMin.FlatAppearance.BorderSize = 0;
+            this.btnStockMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStockMin.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btnStockMin.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnStockMin.Image = ((System.Drawing.Image)(resources.GetObject("btnStockMin.Image")));
+            this.btnStockMin.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnStockMin.Location = new System.Drawing.Point(522, -3);
+            this.btnStockMin.Name = "btnStockMin";
+            this.btnStockMin.Size = new System.Drawing.Size(115, 100);
+            this.btnStockMin.TabIndex = 5;
+            this.btnStockMin.Text = "Stock min.";
+            this.btnStockMin.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnStockMin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnStockMin.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnAtajoEmpleados
             // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button4.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button4.Location = new System.Drawing.Point(413, -3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(115, 100);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Empleados";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnAtajoEmpleados.BackColor = System.Drawing.Color.Transparent;
+            this.btnAtajoEmpleados.FlatAppearance.BorderSize = 0;
+            this.btnAtajoEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtajoEmpleados.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btnAtajoEmpleados.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnAtajoEmpleados.Image = ((System.Drawing.Image)(resources.GetObject("btnAtajoEmpleados.Image")));
+            this.btnAtajoEmpleados.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAtajoEmpleados.Location = new System.Drawing.Point(413, -3);
+            this.btnAtajoEmpleados.Name = "btnAtajoEmpleados";
+            this.btnAtajoEmpleados.Size = new System.Drawing.Size(115, 100);
+            this.btnAtajoEmpleados.TabIndex = 4;
+            this.btnAtajoEmpleados.Text = "Empleados";
+            this.btnAtajoEmpleados.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAtajoEmpleados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnAtajoEmpleados.UseVisualStyleBackColor = false;
+            this.btnAtajoEmpleados.Click += new System.EventHandler(this.btnAtajoEmpleados_Click);
             // 
-            // button3
+            // btnAtajoCompras
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button3.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.Location = new System.Drawing.Point(321, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(98, 100);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Compras";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnAtajoCompras.BackColor = System.Drawing.Color.Transparent;
+            this.btnAtajoCompras.FlatAppearance.BorderSize = 0;
+            this.btnAtajoCompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtajoCompras.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btnAtajoCompras.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnAtajoCompras.Image = ((System.Drawing.Image)(resources.GetObject("btnAtajoCompras.Image")));
+            this.btnAtajoCompras.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAtajoCompras.Location = new System.Drawing.Point(321, 0);
+            this.btnAtajoCompras.Name = "btnAtajoCompras";
+            this.btnAtajoCompras.Size = new System.Drawing.Size(98, 100);
+            this.btnAtajoCompras.TabIndex = 3;
+            this.btnAtajoCompras.Text = "Compras";
+            this.btnAtajoCompras.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAtajoCompras.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnAtajoCompras.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnAtajoVentas
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button2.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(227, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 100);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Ventas";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnAtajoVentas.BackColor = System.Drawing.Color.Transparent;
+            this.btnAtajoVentas.FlatAppearance.BorderSize = 0;
+            this.btnAtajoVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtajoVentas.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btnAtajoVentas.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnAtajoVentas.Image = ((System.Drawing.Image)(resources.GetObject("btnAtajoVentas.Image")));
+            this.btnAtajoVentas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAtajoVentas.Location = new System.Drawing.Point(227, 0);
+            this.btnAtajoVentas.Name = "btnAtajoVentas";
+            this.btnAtajoVentas.Size = new System.Drawing.Size(98, 100);
+            this.btnAtajoVentas.TabIndex = 2;
+            this.btnAtajoVentas.Text = "Ventas";
+            this.btnAtajoVentas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAtajoVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnAtajoVentas.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnAtajoProductos
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(123, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 100);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Productos";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnAtajoProductos.BackColor = System.Drawing.Color.Transparent;
+            this.btnAtajoProductos.FlatAppearance.BorderSize = 0;
+            this.btnAtajoProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtajoProductos.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btnAtajoProductos.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnAtajoProductos.Image = ((System.Drawing.Image)(resources.GetObject("btnAtajoProductos.Image")));
+            this.btnAtajoProductos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAtajoProductos.Location = new System.Drawing.Point(123, 0);
+            this.btnAtajoProductos.Name = "btnAtajoProductos";
+            this.btnAtajoProductos.Size = new System.Drawing.Size(98, 100);
+            this.btnAtajoProductos.TabIndex = 1;
+            this.btnAtajoProductos.Text = "Productos";
+            this.btnAtajoProductos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAtajoProductos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnAtajoProductos.UseVisualStyleBackColor = false;
+            this.btnAtajoProductos.Click += new System.EventHandler(this.btnAtajoProductos_Click);
             // 
-            // btnClientesBarra
+            // btnAtajoClientes
             // 
-            this.btnClientesBarra.BackColor = System.Drawing.Color.Transparent;
-            this.btnClientesBarra.FlatAppearance.BorderSize = 0;
-            this.btnClientesBarra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClientesBarra.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btnClientesBarra.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnClientesBarra.Image = ((System.Drawing.Image)(resources.GetObject("btnClientesBarra.Image")));
-            this.btnClientesBarra.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnClientesBarra.Location = new System.Drawing.Point(19, 0);
-            this.btnClientesBarra.Name = "btnClientesBarra";
-            this.btnClientesBarra.Size = new System.Drawing.Size(98, 100);
-            this.btnClientesBarra.TabIndex = 0;
-            this.btnClientesBarra.Text = "Clientes";
-            this.btnClientesBarra.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnClientesBarra.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnClientesBarra.UseVisualStyleBackColor = false;
+            this.btnAtajoClientes.BackColor = System.Drawing.Color.Transparent;
+            this.btnAtajoClientes.FlatAppearance.BorderSize = 0;
+            this.btnAtajoClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtajoClientes.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btnAtajoClientes.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnAtajoClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnAtajoClientes.Image")));
+            this.btnAtajoClientes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAtajoClientes.Location = new System.Drawing.Point(19, 0);
+            this.btnAtajoClientes.Name = "btnAtajoClientes";
+            this.btnAtajoClientes.Size = new System.Drawing.Size(98, 100);
+            this.btnAtajoClientes.TabIndex = 0;
+            this.btnAtajoClientes.Text = "Clientes";
+            this.btnAtajoClientes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAtajoClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnAtajoClientes.UseVisualStyleBackColor = false;
+            this.btnAtajoClientes.Click += new System.EventHandler(this.btnAtajoClientes_Click);
             // 
             // tmrsubmenu
             // 
@@ -803,12 +807,12 @@
         public System.Windows.Forms.Button btnreportes;
         private System.Windows.Forms.Timer tmrsubmenu;
         private System.Windows.Forms.Label lblUsuarioLogueado;
-        private System.Windows.Forms.Button btnClientesBarra;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnAtajoClientes;
+        private System.Windows.Forms.Button btnAtajoCompras;
+        private System.Windows.Forms.Button btnAtajoVentas;
+        private System.Windows.Forms.Button btnAtajoProductos;
+        private System.Windows.Forms.Button btnStockMin;
+        private System.Windows.Forms.Button btnAtajoEmpleados;
         private System.Windows.Forms.Button btnCerrarSesión;
         public System.Windows.Forms.Button button6;
     }

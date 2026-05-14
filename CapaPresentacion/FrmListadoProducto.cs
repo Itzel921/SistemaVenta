@@ -64,9 +64,9 @@ namespace CapaPresentacion
         {
             FrmRegistrarProducto form = new FrmRegistrarProducto();
 
-            form.Show();
+            form.ShowDialog();
             form.Insert = true;
-            this.Hide();
+            
         }
 
         private void btneditar_Click(object sender, EventArgs e)

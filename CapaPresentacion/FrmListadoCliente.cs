@@ -206,7 +206,7 @@ namespace CapaPresentacion
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dlistado.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dlistado.Location = new System.Drawing.Point(171, 256);
+            this.dlistado.Location = new System.Drawing.Point(143, 256);
             this.dlistado.Name = "dlistado";
             this.dlistado.RowHeadersWidth = 51;
             this.dlistado.RowTemplate.Height = 24;
@@ -267,6 +267,7 @@ namespace CapaPresentacion
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmListadoCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.FrmListadoCliente_Load_1);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -283,8 +284,9 @@ namespace CapaPresentacion
             FrmRegistrarCliente form = new FrmRegistrarCliente();
             form.Insert = true;
 
-            form.Show();
+            form.ShowDialog();
             this.Hide();
+            
         }
 
         private void btneditar_Click(object sender, EventArgs e)
