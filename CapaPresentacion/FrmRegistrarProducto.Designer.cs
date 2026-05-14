@@ -54,7 +54,13 @@
             this.txtcantidad = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
             this.cboidcategoria = new System.Windows.Forms.ComboBox();
+            this.picCodigoBarras = new System.Windows.Forms.PictureBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnGenerar = new System.Windows.Forms.Button();
+            this.btnImprimir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.txtcantidad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCodigoBarras)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtidproducto
@@ -70,7 +76,7 @@
             this.btncancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btncancelar.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
             this.btncancelar.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btncancelar.Location = new System.Drawing.Point(333, 653);
+            this.btncancelar.Location = new System.Drawing.Point(387, 653);
             this.btncancelar.Name = "btncancelar";
             this.btncancelar.Size = new System.Drawing.Size(115, 34);
             this.btncancelar.TabIndex = 32;
@@ -94,7 +100,7 @@
             // txtcodigo
             // 
             this.txtcodigo.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtcodigo.Location = new System.Drawing.Point(316, 123);
+            this.txtcodigo.Location = new System.Drawing.Point(662, 127);
             this.txtcodigo.Name = "txtcodigo";
             this.txtcodigo.Size = new System.Drawing.Size(231, 27);
             this.txtcodigo.TabIndex = 27;
@@ -112,7 +118,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 12F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label5.Location = new System.Drawing.Point(313, 96);
+            this.label5.Location = new System.Drawing.Point(659, 100);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 24);
             this.label5.TabIndex = 21;
@@ -176,7 +182,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 12F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label9.Location = new System.Drawing.Point(324, 333);
+            this.label9.Location = new System.Drawing.Point(341, 333);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(240, 24);
             this.label9.TabIndex = 37;
@@ -186,7 +192,7 @@
             // 
             this.dtfechavencimiento.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.dtfechavencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtfechavencimiento.Location = new System.Drawing.Point(324, 369);
+            this.dtfechavencimiento.Location = new System.Drawing.Point(341, 369);
             this.dtfechavencimiento.Name = "dtfechavencimiento";
             this.dtfechavencimiento.Size = new System.Drawing.Size(224, 27);
             this.dtfechavencimiento.TabIndex = 36;
@@ -215,7 +221,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 12F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label10.Location = new System.Drawing.Point(324, 433);
+            this.label10.Location = new System.Drawing.Point(341, 433);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(177, 24);
             this.label10.TabIndex = 38;
@@ -224,7 +230,7 @@
             // txtprecioventa
             // 
             this.txtprecioventa.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtprecioventa.Location = new System.Drawing.Point(324, 469);
+            this.txtprecioventa.Location = new System.Drawing.Point(341, 469);
             this.txtprecioventa.Name = "txtprecioventa";
             this.txtprecioventa.Size = new System.Drawing.Size(224, 27);
             this.txtprecioventa.TabIndex = 39;
@@ -234,7 +240,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label11.Location = new System.Drawing.Point(340, 534);
+            this.label11.Location = new System.Drawing.Point(669, 216);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(0, 24);
             this.label11.TabIndex = 42;
@@ -244,7 +250,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 12F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label12.Location = new System.Drawing.Point(35, 526);
+            this.label12.Location = new System.Drawing.Point(337, 84);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(75, 24);
             this.label12.TabIndex = 40;
@@ -255,7 +261,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 12F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label6.Location = new System.Drawing.Point(324, 526);
+            this.label6.Location = new System.Drawing.Point(653, 208);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(172, 24);
             this.label6.TabIndex = 44;
@@ -266,7 +272,7 @@
             this.rbactivo.AutoSize = true;
             this.rbactivo.Checked = true;
             this.rbactivo.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
-            this.rbactivo.Location = new System.Drawing.Point(333, 565);
+            this.rbactivo.Location = new System.Drawing.Point(662, 247);
             this.rbactivo.Name = "rbactivo";
             this.rbactivo.Size = new System.Drawing.Size(84, 24);
             this.rbactivo.TabIndex = 45;
@@ -278,7 +284,7 @@
             // 
             this.rbinactivo.AutoSize = true;
             this.rbinactivo.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
-            this.rbinactivo.Location = new System.Drawing.Point(447, 565);
+            this.rbinactivo.Location = new System.Drawing.Point(776, 247);
             this.rbinactivo.Name = "rbinactivo";
             this.rbinactivo.Size = new System.Drawing.Size(87, 24);
             this.rbinactivo.TabIndex = 46;
@@ -297,7 +303,7 @@
             // txtcantidad
             // 
             this.txtcantidad.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtcantidad.Location = new System.Drawing.Point(39, 565);
+            this.txtcantidad.Location = new System.Drawing.Point(341, 123);
             this.txtcantidad.Name = "txtcantidad";
             this.txtcantidad.Size = new System.Drawing.Size(217, 27);
             this.txtcantidad.TabIndex = 48;
@@ -312,7 +318,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 12F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label7.Location = new System.Drawing.Point(313, 195);
+            this.label7.Location = new System.Drawing.Point(330, 195);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(120, 24);
             this.label7.TabIndex = 49;
@@ -322,16 +328,65 @@
             // 
             this.cboidcategoria.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
             this.cboidcategoria.FormattingEnabled = true;
-            this.cboidcategoria.Location = new System.Drawing.Point(317, 243);
+            this.cboidcategoria.Location = new System.Drawing.Point(335, 231);
             this.cboidcategoria.Name = "cboidcategoria";
             this.cboidcategoria.Size = new System.Drawing.Size(230, 28);
             this.cboidcategoria.TabIndex = 50;
+            // 
+            // picCodigoBarras
+            // 
+            this.picCodigoBarras.Location = new System.Drawing.Point(81, 59);
+            this.picCodigoBarras.Name = "picCodigoBarras";
+            this.picCodigoBarras.Size = new System.Drawing.Size(172, 95);
+            this.picCodigoBarras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picCodigoBarras.TabIndex = 51;
+            this.picCodigoBarras.TabStop = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnImprimir);
+            this.groupBox1.Controls.Add(this.btnGenerar);
+            this.groupBox1.Controls.Add(this.picCodigoBarras);
+            this.groupBox1.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 12F, System.Drawing.FontStyle.Bold);
+            this.groupBox1.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.groupBox1.Location = new System.Drawing.Point(640, 342);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(343, 260);
+            this.groupBox1.TabIndex = 52;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Generar Código de barras";
+            // 
+            // btnGenerar
+            // 
+            this.btnGenerar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerar.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnGenerar.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnGenerar.Location = new System.Drawing.Point(23, 191);
+            this.btnGenerar.Name = "btnGenerar";
+            this.btnGenerar.Size = new System.Drawing.Size(115, 34);
+            this.btnGenerar.TabIndex = 53;
+            this.btnGenerar.Text = "&Generar";
+            this.btnGenerar.UseVisualStyleBackColor = true;
+            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImprimir.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnImprimir.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnImprimir.Location = new System.Drawing.Point(192, 191);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(115, 34);
+            this.btnImprimir.TabIndex = 54;
+            this.btnImprimir.Text = "&Imprimir";
+            this.btnImprimir.UseVisualStyleBackColor = true;
             // 
             // FrmRegistrarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(628, 729);
+            this.ClientSize = new System.Drawing.Size(1037, 729);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.cboidcategoria);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtcantidad);
@@ -365,6 +420,8 @@
             this.Text = "FrmRegistrarProducto";
             this.Load += new System.EventHandler(this.FrmRegistrarProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtcantidad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCodigoBarras)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -398,5 +455,9 @@
         public System.Windows.Forms.ComboBox cboidcategoria;
         public System.Windows.Forms.RadioButton rbactivo;
         public System.Windows.Forms.RadioButton rbinactivo;
+        private System.Windows.Forms.PictureBox picCodigoBarras;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnImprimir;
+        private System.Windows.Forms.Button btnGenerar;
     }
 }
