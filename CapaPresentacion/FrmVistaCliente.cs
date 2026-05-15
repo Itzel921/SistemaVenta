@@ -30,13 +30,9 @@ namespace CapaPresentacion
         //Doble clic en una celda
         private void dgvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Verificamos que no hayan dado clic en los títulos de las columnas (-1)
             if (e.RowIndex >= 0)
             {
-                // Corregimos los nombres de las columnas para que coincidan con tu BD
                 IdCliente = dgvClientes.Rows[e.RowIndex].Cells["idcliente"].Value.ToString();
-
-                // AQUÍ ESTABA EL ERROR: Cambiamos "num_documento" por "dni"
                 Documento = dgvClientes.Rows[e.RowIndex].Cells["dni"].Value.ToString();
 
                 string nombre = dgvClientes.Rows[e.RowIndex].Cells["nombre"].Value.ToString();

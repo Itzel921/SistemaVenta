@@ -4,10 +4,9 @@ using System.Data.SqlClient;
 
 namespace CapaDatos
 {
-    public class CDVenta
+    public class CDCompra
     {
         public DateTime Fecha { get; set; }
-        public string Serie { get; set; }
         public string Documento { get; set; }
         public string Tipo_Documento { get; set; }
         public decimal Subtotal { get; set; }
@@ -15,13 +14,13 @@ namespace CapaDatos
         public decimal Total { get; set; }
         public string Estado { get; set; }
         public int IdUsuario { get; set; }
-        public int IdCliente { get; set; }
+        public int IdProveedor { get; set; }
         public decimal Cantidad { get; set; }
         public decimal Precio { get; set; }
-        public int IdVenta { get; set; }
+        public int IdCompra { get; set; }
         public int IdProducto { get; set; }
 
-        public int Guardar(CDVenta ven)
+        public int Guardar(CDCompra compra)
         {
             int idGenerado = 0;
             SqlConnection conexion = new SqlConnection();
@@ -30,32 +29,30 @@ namespace CapaDatos
                 conexion.ConnectionString = Conexion.Conn;
                 conexion.Open();
 
-                SqlCommand Cmd = new SqlCommand("sp_insertar_venta", conexion);
+                SqlCommand Cmd = new SqlCommand("sp_insertar_compra", conexion);
                 Cmd.CommandType = CommandType.StoredProcedure;
 
                 // Parámetro de salida configurado correctamente
-                SqlParameter parIdVenta = new SqlParameter("@idventa", SqlDbType.Int);
-                parIdVenta.Direction = ParameterDirection.Output;
-                Cmd.Parameters.Add(parIdVenta);
+                SqlParameter parIdCompra = new SqlParameter("@idcompra", SqlDbType.Int);
+                parIdCompra.Direction = ParameterDirection.Output;
+                Cmd.Parameters.Add(parIdCompra);
 
-                Cmd.Parameters.AddWithValue("@fecha", ven.Fecha);
-                Cmd.Parameters.AddWithValue("@serie", ven.Serie);
-                Cmd.Parameters.AddWithValue("@num_documento", ven.Documento);
-                Cmd.Parameters.AddWithValue("@tipo_documento", ven.Tipo_Documento);
-                Cmd.Parameters.AddWithValue("@subtotal", ven.Subtotal);
-                Cmd.Parameters.AddWithValue("@iva", ven.Iva);
-                Cmd.Parameters.AddWithValue("@total", ven.Total);
-                Cmd.Parameters.AddWithValue("@estado", ven.Estado);
-                Cmd.Parameters.AddWithValue("@idusuario", ven.IdUsuario);
-                Cmd.Parameters.AddWithValue("@idcliente", ven.IdCliente);
-
+                Cmd.Parameters.AddWithValue("@fecha", compra.Fecha);
+                Cmd.Parameters.AddWithValue("@num_documento", compra.Documento);
+                Cmd.Parameters.AddWithValue("@tipo_documento", compra.Tipo_Documento);
+                Cmd.Parameters.AddWithValue("@subtotal", compra.Subtotal);
+                Cmd.Parameters.AddWithValue("@iva", compra.Iva);
+                Cmd.Parameters.AddWithValue("@total", compra.Total);
+                Cmd.Parameters.AddWithValue("@estado", compra.Estado);
+                Cmd.Parameters.AddWithValue("@idusuario", compra.IdUsuario);
+                Cmd.Parameters.AddWithValue("@idproveedor", compra.IdProveedor  );
                 Cmd.ExecuteNonQuery();
 
-                idGenerado = Convert.ToInt32(Cmd.Parameters["@idventa"].Value);
+                idGenerado = Convert.ToInt32(Cmd.Parameters["@idcompra"].Value);
             }
             catch (Exception ex)
             {
-                idGenerado = 0;        
+                idGenerado = 0;
             }
             finally
             {
@@ -64,7 +61,7 @@ namespace CapaDatos
             return idGenerado;
         }
 
-        public string InsertarDetalle(CDVenta ven)
+        public string InsertarDetalle(CDCompra compra)
         {
             string resul = "";
             SqlConnection conexion = new SqlConnection();
@@ -73,14 +70,14 @@ namespace CapaDatos
                 conexion.ConnectionString = Conexion.Conn;
                 conexion.Open();
 
-                SqlCommand Cmd = new SqlCommand("sp_InsertarDetalleVenta", conexion);
+                SqlCommand Cmd = new SqlCommand("sp_insertar_detalle_compra", conexion);
                 Cmd.CommandType = CommandType.StoredProcedure;
 
-                Cmd.Parameters.AddWithValue("@cantidad", ven.Cantidad);
-                Cmd.Parameters.AddWithValue("@precio", ven.Precio);
-                Cmd.Parameters.AddWithValue("@total", ven.Total);
-                Cmd.Parameters.AddWithValue("@idventa", ven.IdVenta);
-                Cmd.Parameters.AddWithValue("@idproducto", ven.IdProducto);
+                Cmd.Parameters.AddWithValue("@cantidad", compra.Cantidad);
+                Cmd.Parameters.AddWithValue("@precio", compra.Precio);
+                Cmd.Parameters.AddWithValue("@total", compra.Total);
+                Cmd.Parameters.AddWithValue("@idcompra", compra.IdCompra);
+                Cmd.Parameters.AddWithValue("@idproducto", compra.IdProducto);
 
                 Cmd.ExecuteNonQuery();
                 resul = "OK";

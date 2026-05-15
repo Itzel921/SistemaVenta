@@ -344,5 +344,10 @@ namespace CapaPresentacion
         {
             AbrirFormulario(new FrmRegistrarVenta());
         }
+
+        private void btnAtajoCompras_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new FrmRegistrarCompra());
+        }
     }
 }

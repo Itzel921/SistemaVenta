@@ -385,7 +385,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1353, 770);
+            this.ClientSize = new System.Drawing.Size(1353, 720);
             this.Controls.Add(this.btnRegistrarVenta);
             this.Controls.Add(this.lblTotalPagar);
             this.Controls.Add(this.dgvDetalleVenta);

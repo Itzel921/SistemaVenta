@@ -676,6 +676,7 @@
             this.btnAtajoCompras.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAtajoCompras.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnAtajoCompras.UseVisualStyleBackColor = false;
+            this.btnAtajoCompras.Click += new System.EventHandler(this.btnAtajoCompras_Click);
             // 
             // btnAtajoVentas
             // 

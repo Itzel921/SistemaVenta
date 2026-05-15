@@ -465,8 +465,137 @@ GO
 
 
 
+----------------------------------------------------------
+------------------------VENTA-------------------------
+----------------------------------------------------------
+
+CREATE PROC sp_insertar_venta
+    @fecha DATETIME,
+    @serie VARCHAR(15),
+    @num_documento VARCHAR(15),
+    @tipo_documento VARCHAR(20),
+    @subtotal DECIMAL(8,2),
+    @iva DECIMAL(8,2),
+    @total DECIMAL(8,2),
+    @estado VARCHAR(20),
+    @idusuario INT,
+    @idcliente INT,
+    @idventa INT OUTPUT
+AS
+BEGIN
+    INSERT INTO venta (fecha, serie, num_documento, tipo_documento, subtotal, iva, total, estado, idusuario, idcliente)
+    VALUES (@fecha, @serie, @num_documento, @tipo_documento, @subtotal, @iva, @total, @estado, @idusuario, @idcliente);
+
+    SET @idventa = SCOPE_IDENTITY();
+END
 
 
 
+
+CREATE PROCEDURE sp_InsertarDetalleVenta
+    @cantidad DECIMAL(10,2),
+    @precio DECIMAL(8,2),
+    @total DECIMAL(8,2), -- Este es el subtotal de ese producto (cantidad * precio)
+    @idventa INT,
+    @idproducto INT
+AS
+BEGIN
+    INSERT INTO detalleventa (cantidad, precio, total, idventa, idproducto)
+    VALUES (@cantidad, @precio, @total, @idventa, @idproducto);
+
+    UPDATE producto SET stock = stock - @cantidad WHERE idproducto = @idproducto;
+END
+
+
+
+
+
+----------------------------------------------------------
+------------------------COMPRA-------------------------
+----------------------------------------------------------
+
+CREATE PROC sp_insertar_compra
+    @fecha DATETIME,
+    @num_documento VARCHAR(15),
+    @tipo_documento VARCHAR(20),
+    @subtotal DECIMAL(8,2),
+    @iva DECIMAL(8,2),
+    @total DECIMAL(8,2),
+    @estado VARCHAR(20),
+    @idusuario INT,
+    @idproveedor INT,
+    @idcompra INT OUTPUT
+AS
+BEGIN
+    INSERT INTO compra (fecha, num_documento, tipo_documento, subtotal, iva, total, estado, idusuario, idproveedor)
+    VALUES (@fecha, @num_documento, @tipo_documento, @subtotal, @iva, @total, @estado, @idusuario, @idproveedor);
+
+    -- Atrapamos el ID generado
+    SET @idcompra = SCOPE_IDENTITY();
+END
+
+
+
+CREATE PROC sp_insertar_detalle_compra
+    @cantidad DECIMAL(10,2),
+    @precio DECIMAL(8,2),
+    @total DECIMAL(8,2),
+    @idcompra INT,
+    @idproducto INT
+AS
+BEGIN
+    INSERT INTO detallecompra (cantidad, precio, total, idcompra, idproducto)
+    VALUES (@cantidad, @precio, @total, @idcompra, @idproducto);
+END
+
+
+
+
+
+----------------------------------------------------------
+---------------AÑADIR/REDUCIR STOCK--------------------
+----------------------------------------------------------
+
+
+ALTER PROC sp_insertar_detalle_compra
+    @cantidad DECIMAL(10,2),
+    @precio DECIMAL(8,2),
+    @total DECIMAL(8,2),
+    @idcompra INT,
+    @idproducto INT
+AS
+BEGIN
+    --Insertamos el producto en el detalle de la compra
+    INSERT INTO detallecompra (cantidad, precio, total, idcompra, idproducto)
+    VALUES (@cantidad, @precio, @total, @idcompra, @idproducto);
+
+    --Sumamos la mercancía nueva al inventario actua
+    UPDATE producto 
+    SET stock = stock + @cantidad 
+    WHERE idproducto = @idproducto;
+
+	UPDATE producto 
+	SET precio_compra = @precio
+	WHERE idproducto = @idproducto;
+END
+
+
+
+ALTER PROC sp_InsertarDetalleVenta
+    @cantidad DECIMAL(10,2),
+    @precio DECIMAL(8,2),
+    @total DECIMAL(8,2),
+    @idventa INT,
+    @idproducto INT
+AS
+BEGIN
+
+    INSERT INTO detalleventa (cantidad, precio, total, idventa, idproducto)
+    VALUES (@cantidad, @precio, @total, @idventa, @idproducto);
+
+    UPDATE producto 
+    SET stock = stock - @cantidad 
+    WHERE idproducto = @idproducto;
+END
 
 SELECT * FROM usuario

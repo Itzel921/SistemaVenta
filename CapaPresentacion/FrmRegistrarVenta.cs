@@ -49,12 +49,11 @@ namespace CapaPresentacion
 
         private void LimpiarProducto()
         {
-            // Cambia los nombres por los que usaste en tus TextBox
             txtCodigo.Clear();
             txtProducto.Clear();
             txtPrecio.Clear();
-            txtCantidad.Value = 0; // Asumiendo que usaste un NumericUpDown
-            txtCodigo.Focus(); // Regresamos el cursor al código
+            txtCantidad.Value = 0;
+            txtCodigo.Focus();
         }
 
         private void btnAgregarProducto_Click(object sender, EventArgs e)
