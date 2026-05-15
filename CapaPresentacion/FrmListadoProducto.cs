@@ -66,7 +66,7 @@ namespace CapaPresentacion
 
             form.ShowDialog();
             form.Insert = true;
-            
+
         }
 
         private void btneditar_Click(object sender, EventArgs e)
@@ -74,7 +74,7 @@ namespace CapaPresentacion
             FrmRegistrarProducto form = new FrmRegistrarProducto();
 
             form.Edit = true;
-            
+
 
             form.txtidproducto.Text = this.dlistado.CurrentRow.Cells["idproducto"].Value.ToString();
             form.txtcodigo.Text = this.dlistado.CurrentRow.Cells["codigo"].Value.ToString();
@@ -136,6 +136,11 @@ namespace CapaPresentacion
         {
             this.Close();
         }
-    }
 
+        private void btnreporte_Click(object sender, EventArgs e)
+        {
+            new FrmReporteProducto().ShowDialog();
+        }
     }
+}
+    

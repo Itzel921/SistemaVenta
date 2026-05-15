@@ -252,6 +252,14 @@ namespace CapaPresentacion
 
         }
 
+        private void btngenerarventa_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new FrmRegistrarVenta());
+
+            mnualmacen.Width = 214;
+            mnualmacen.Height = 37;
+        }
+
         private void btnclientes_Click(object sender, EventArgs e)
         {
             AbrirFormulario(new FrmListadoCliente());
@@ -259,6 +267,38 @@ namespace CapaPresentacion
             mnualmacen.Width = 214;
             mnualmacen.Height = 37;
 
+        }
+
+        private void btnreporteproducto_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new FrmReporteProducto());
+
+            mnualmacen.Width = 214;
+            mnualmacen.Height = 37;
+        }
+
+        private void btnreportecliente_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new FrmReporteCliente());
+
+            mnualmacen.Width = 214;
+            mnualmacen.Height = 37;
+        }
+
+        private void btnreporteempleado_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new FrmReporteEmpleado());
+
+            mnualmacen.Width = 214;
+            mnualmacen.Height = 37;
+        }
+
+        private void btngenerarcompra_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new FrmRegistrarCompra());
+
+            mnucompra.Width = 214;
+            mnucompra.Height = 37;
         }
 
         private void btnproveedor_Click(object sender, EventArgs e)
@@ -334,12 +374,7 @@ namespace CapaPresentacion
         {
             AbrirFormulario(new FrmListadoProducto());
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+  
         private void btnAtajoVentas_Click(object sender, EventArgs e)
         {
             AbrirFormulario(new FrmRegistrarVenta());
@@ -349,5 +384,7 @@ namespace CapaPresentacion
         {
             AbrirFormulario(new FrmRegistrarCompra());
         }
+
+        
     }
 }

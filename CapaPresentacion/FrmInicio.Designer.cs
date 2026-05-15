@@ -103,7 +103,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1356, 67);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // lblUsuarioLogueado
             // 
@@ -202,7 +201,7 @@
             this.mnualmacen.MaximumSize = new System.Drawing.Size(255, 120);
             this.mnualmacen.MinimumSize = new System.Drawing.Size(240, 37);
             this.mnualmacen.Name = "mnualmacen";
-            this.mnualmacen.Size = new System.Drawing.Size(255, 44);
+            this.mnualmacen.Size = new System.Drawing.Size(255, 46);
             this.mnualmacen.TabIndex = 4;
             // 
             // categoria
@@ -257,11 +256,11 @@
             this.mnucompra.Controls.Add(this.btnproveedor);
             this.mnucompra.Controls.Add(this.btngenerarcompra);
             this.mnucompra.Controls.Add(this.btncompras);
-            this.mnucompra.Location = new System.Drawing.Point(3, 156);
+            this.mnucompra.Location = new System.Drawing.Point(3, 158);
             this.mnucompra.MaximumSize = new System.Drawing.Size(255, 120);
             this.mnucompra.MinimumSize = new System.Drawing.Size(229, 37);
             this.mnucompra.Name = "mnucompra";
-            this.mnucompra.Size = new System.Drawing.Size(255, 43);
+            this.mnucompra.Size = new System.Drawing.Size(255, 45);
             this.mnucompra.TabIndex = 7;
             // 
             // btnproveedor
@@ -292,6 +291,7 @@
             this.btngenerarcompra.TabIndex = 1;
             this.btngenerarcompra.Text = "Generar compra";
             this.btngenerarcompra.UseVisualStyleBackColor = false;
+            this.btngenerarcompra.Click += new System.EventHandler(this.btngenerarcompra_Click);
             // 
             // btncompras
             // 
@@ -315,11 +315,11 @@
             this.mnuventa.Controls.Add(this.btnclientes);
             this.mnuventa.Controls.Add(this.btngenerarventa);
             this.mnuventa.Controls.Add(this.btnventas);
-            this.mnuventa.Location = new System.Drawing.Point(3, 205);
+            this.mnuventa.Location = new System.Drawing.Point(3, 209);
             this.mnuventa.MaximumSize = new System.Drawing.Size(255, 120);
             this.mnuventa.MinimumSize = new System.Drawing.Size(229, 37);
             this.mnuventa.Name = "mnuventa";
-            this.mnuventa.Size = new System.Drawing.Size(255, 44);
+            this.mnuventa.Size = new System.Drawing.Size(255, 45);
             this.mnuventa.TabIndex = 6;
             // 
             // btnclientes
@@ -350,6 +350,7 @@
             this.btngenerarventa.TabIndex = 1;
             this.btngenerarventa.Text = "Generar venta";
             this.btngenerarventa.UseVisualStyleBackColor = false;
+            this.btngenerarventa.Click += new System.EventHandler(this.btngenerarventa_Click);
             // 
             // btnventas
             // 
@@ -374,11 +375,11 @@
             this.mnureportes.Controls.Add(this.btnreportecliente);
             this.mnureportes.Controls.Add(this.btnreporteproducto);
             this.mnureportes.Controls.Add(this.btnreportes);
-            this.mnureportes.Location = new System.Drawing.Point(3, 255);
+            this.mnureportes.Location = new System.Drawing.Point(3, 260);
             this.mnureportes.MaximumSize = new System.Drawing.Size(255, 150);
             this.mnureportes.MinimumSize = new System.Drawing.Size(229, 37);
             this.mnureportes.Name = "mnureportes";
-            this.mnureportes.Size = new System.Drawing.Size(255, 45);
+            this.mnureportes.Size = new System.Drawing.Size(255, 150);
             this.mnureportes.TabIndex = 8;
             // 
             // btnreporteempleado
@@ -394,6 +395,7 @@
             this.btnreporteempleado.TabIndex = 3;
             this.btnreporteempleado.Text = "Empleados";
             this.btnreporteempleado.UseVisualStyleBackColor = false;
+            this.btnreporteempleado.Click += new System.EventHandler(this.btnreporteempleado_Click);
             // 
             // btnreportecliente
             // 
@@ -408,6 +410,7 @@
             this.btnreportecliente.TabIndex = 2;
             this.btnreportecliente.Text = "Clientes";
             this.btnreportecliente.UseVisualStyleBackColor = false;
+            this.btnreportecliente.Click += new System.EventHandler(this.btnreportecliente_Click);
             // 
             // btnreporteproducto
             // 
@@ -422,6 +425,7 @@
             this.btnreporteproducto.TabIndex = 1;
             this.btnreporteproducto.Text = "Productos";
             this.btnreporteproducto.UseVisualStyleBackColor = false;
+            this.btnreporteproducto.Click += new System.EventHandler(this.btnreporteproducto_Click);
             // 
             // btnreportes
             // 
@@ -447,7 +451,7 @@
             this.mnuconsultas.Controls.Add(this.btncomprafechas);
             this.mnuconsultas.Controls.Add(this.btnventafechas);
             this.mnuconsultas.Controls.Add(this.btnconsultas);
-            this.mnuconsultas.Location = new System.Drawing.Point(3, 306);
+            this.mnuconsultas.Location = new System.Drawing.Point(3, 416);
             this.mnuconsultas.MaximumSize = new System.Drawing.Size(255, 188);
             this.mnuconsultas.MinimumSize = new System.Drawing.Size(229, 37);
             this.mnuconsultas.Name = "mnuconsultas";
@@ -532,7 +536,7 @@
             this.mnuconfiguraciones.Controls.Add(this.btnusuarios);
             this.mnuconfiguraciones.Controls.Add(this.btnempleados);
             this.mnuconfiguraciones.Controls.Add(this.btnconfiguraciones);
-            this.mnuconfiguraciones.Location = new System.Drawing.Point(3, 355);
+            this.mnuconfiguraciones.Location = new System.Drawing.Point(3, 465);
             this.mnuconfiguraciones.MaximumSize = new System.Drawing.Size(255, 120);
             this.mnuconfiguraciones.MinimumSize = new System.Drawing.Size(229, 37);
             this.mnuconfiguraciones.Name = "mnuconfiguraciones";

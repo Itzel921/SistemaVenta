@@ -109,7 +109,10 @@ CREATE TABLE detalleventa(
 	idproducto INT REFERENCES producto(idproducto) 
 )
 
+SELECT * FROM venta
+SELECT * FROM detalleventa
 SELECT * FROM usuario
-SELECT * FROM cliente
-SELECT * FROM producto
-SELECT * FROM categoria
+
+SELECT * FROM detallecompra
+
+SELECT * FROM compra

@@ -39,6 +39,7 @@
             this.btnsalir = new System.Windows.Forms.Button();
             this.btnbuscar = new System.Windows.Forms.Button();
             this.txtbuscar = new System.Windows.Forms.TextBox();
+            this.btnreporte = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dlistado)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -47,7 +48,7 @@
             // 
             this.btneliminar.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
             this.btneliminar.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btneliminar.Location = new System.Drawing.Point(451, 452);
+            this.btneliminar.Location = new System.Drawing.Point(382, 452);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(107, 37);
             this.btneliminar.TabIndex = 12;
@@ -59,7 +60,7 @@
             // 
             this.btneditar.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
             this.btneditar.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btneditar.Location = new System.Drawing.Point(95, 452);
+            this.btneditar.Location = new System.Drawing.Point(28, 452);
             this.btneditar.Name = "btneditar";
             this.btneditar.Size = new System.Drawing.Size(107, 37);
             this.btneditar.TabIndex = 11;
@@ -71,7 +72,7 @@
             // 
             this.btnnuevo.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnnuevo.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnnuevo.Location = new System.Drawing.Point(272, 452);
+            this.btnnuevo.Location = new System.Drawing.Point(207, 452);
             this.btnnuevo.Name = "btnnuevo";
             this.btnnuevo.Size = new System.Drawing.Size(107, 37);
             this.btnnuevo.TabIndex = 10;
@@ -160,12 +161,24 @@
             this.txtbuscar.TabIndex = 1;
             this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
             // 
+            // btnreporte
+            // 
+            this.btnreporte.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btnreporte.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnreporte.Location = new System.Drawing.Point(554, 455);
+            this.btnreporte.Name = "btnreporte";
+            this.btnreporte.Size = new System.Drawing.Size(129, 34);
+            this.btnreporte.TabIndex = 13;
+            this.btnreporte.Text = "&Reporte";
+            this.btnreporte.UseVisualStyleBackColor = true;
+            // 
             // FrmListadoCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(695, 524);
+            this.Controls.Add(this.btnreporte);
             this.Controls.Add(this.btneliminar);
             this.Controls.Add(this.btneditar);
             this.Controls.Add(this.btnnuevo);
@@ -193,5 +206,6 @@
         private System.Windows.Forms.Button btnbuscar;
         private System.Windows.Forms.TextBox txtbuscar;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnreporte;
     }
 }
