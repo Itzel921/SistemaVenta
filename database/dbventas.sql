@@ -65,9 +65,10 @@ CREATE TABLE usuario (
 
 CREATE TABLE compra( 
 	idcompra INT IDENTITY PRIMARY KEY, 
-	fecha DATE, 
-	num_documento VARCHAR(7),
-	tipo_documento VARCHAR(7), subtotal DECIMAL(8,2), 
+	fecha DATETIME, 
+	num_documento VARCHAR(15),
+	tipo_documento VARCHAR(20), 
+	subtotal DECIMAL(8,2), 
 	iva DECIMAL(8,2), 
 	total DECIMAL(8,2), 
 	estado VARCHAR(20), 
@@ -78,7 +79,7 @@ CREATE TABLE compra(
 
 CREATE TABLE detallecompra ( 
 	iddetallecompra INT IDENTITY PRIMARY KEY, 
-	cantidad INT, 
+	cantidad DECIMAL(10,2), 
 	precio DECIMAL(8,2), 
 	total DECIMAL(8,2), 
 	idcompra INT REFERENCES compra(idcompra), 
@@ -87,8 +88,9 @@ CREATE TABLE detallecompra (
 
 CREATE TABLE venta ( 
 	idventa INT IDENTITY PRIMARY KEY, 
-	fecha DATE, serie VARCHAR(7), 
-	num_documento VARCHAR(7), 
+	fecha DATETIME, 
+	serie VARCHAR(15), 
+	num_documento VARCHAR(15), 
 	tipo_documento VARCHAR(7), 
 	subtotal DECIMAL(8,2), 
 	iva DECIMAL(8,2), 
@@ -100,7 +102,7 @@ CREATE TABLE venta (
 
 CREATE TABLE detalleventa( 
 	iddetalleventa INT IDENTITY PRIMARY KEY, 
-	cantidad INT, 
+	cantidad DECIMAL(10,2), 
 	precio DECIMAL(8,2), 
 	total DECIMAL(8,2), 
 	idventa INT REFERENCES venta(idventa), 

@@ -108,9 +108,10 @@
             // lblUsuarioLogueado
             // 
             this.lblUsuarioLogueado.AutoSize = true;
+            this.lblUsuarioLogueado.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblUsuarioLogueado.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
             this.lblUsuarioLogueado.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lblUsuarioLogueado.Location = new System.Drawing.Point(1152, 44);
+            this.lblUsuarioLogueado.Location = new System.Drawing.Point(0, 47);
             this.lblUsuarioLogueado.Name = "lblUsuarioLogueado";
             this.lblUsuarioLogueado.Size = new System.Drawing.Size(175, 20);
             this.lblUsuarioLogueado.TabIndex = 4;
@@ -693,6 +694,7 @@
             this.btnAtajoVentas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAtajoVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnAtajoVentas.UseVisualStyleBackColor = false;
+            this.btnAtajoVentas.Click += new System.EventHandler(this.btnAtajoVentas_Click);
             // 
             // btnAtajoProductos
             // 
