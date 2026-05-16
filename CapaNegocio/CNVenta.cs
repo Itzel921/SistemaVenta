@@ -1,5 +1,6 @@
 ﻿using CapaDatos;
 using System;
+using System.Data;
 
 namespace CapaNegocio
 {
@@ -32,6 +33,15 @@ namespace CapaNegocio
             Datos.Total = totalLinea;
 
             return Datos.InsertarDetalle(Datos);
+        }
+
+        public static DataTable ConsultarVentasPorFecha(DateTime fechaInicio, DateTime fechaFin)
+        {
+            CDVenta Datos = new CDVenta();
+            Datos.FechaInicio = fechaInicio;
+            Datos.FechaFin = fechaFin;
+
+            return Datos.ConsultarVentasPorFecha(Datos);
         }
     }
 }

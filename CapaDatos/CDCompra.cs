@@ -92,5 +92,35 @@ namespace CapaDatos
             }
             return resul;
         }
+
+        public DataTable ConsultarComprasPorFecha(DateTime fechaInicio, DateTime fechaFin)
+        {
+            DataTable dtResultado = new DataTable();
+            SqlConnection conexion = new SqlConnection();
+
+            try
+            {
+                conexion.ConnectionString = Conexion.Conn;
+
+                SqlCommand Cmd = new SqlCommand("sp_consultar_compras_fecha", conexion);
+                Cmd.CommandType = CommandType.StoredProcedure;
+
+                Cmd.Parameters.AddWithValue("@fechaInicio", fechaInicio.ToString("yyyy-MM-dd"));
+                Cmd.Parameters.AddWithValue("@fechaFin", fechaFin.ToString("yyyy-MM-dd"));
+
+                SqlDataAdapter da = new SqlDataAdapter(Cmd);
+                da.Fill(dtResultado);
+
+                return dtResultado;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            finally
+            {
+                if (conexion.State == ConnectionState.Open) conexion.Close();
+            }
+        }
     }
 }

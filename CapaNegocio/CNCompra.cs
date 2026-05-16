@@ -1,6 +1,7 @@
 ﻿using CapaDatos;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,6 +36,12 @@ namespace CapaNegocio
             Datos.Total = totalLinea;
 
             return Datos.InsertarDetalle(Datos);
+        }
+
+        public static DataTable ConsultarComprasPorFecha(DateTime fechaInicio, DateTime fechaFin)
+        {
+            CDCompra objCompra = new CDCompra();
+            return objCompra.ConsultarComprasPorFecha(fechaInicio, fechaFin);
         }
     }
 }

@@ -50,11 +50,6 @@
             this.btnclientes = new System.Windows.Forms.Button();
             this.btngenerarventa = new System.Windows.Forms.Button();
             this.btnventas = new System.Windows.Forms.Button();
-            this.mnureportes = new System.Windows.Forms.Panel();
-            this.btnreporteempleado = new System.Windows.Forms.Button();
-            this.btnreportecliente = new System.Windows.Forms.Button();
-            this.btnreporteproducto = new System.Windows.Forms.Button();
-            this.btnreportes = new System.Windows.Forms.Button();
             this.mnuconsultas = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.btnstockminimo = new System.Windows.Forms.Button();
@@ -65,6 +60,12 @@
             this.btnusuarios = new System.Windows.Forms.Button();
             this.btnempleados = new System.Windows.Forms.Button();
             this.btnconfiguraciones = new System.Windows.Forms.Button();
+            this.mnureportes = new System.Windows.Forms.Panel();
+            this.btnreportesventas = new System.Windows.Forms.Button();
+            this.btnreporteempleado = new System.Windows.Forms.Button();
+            this.btnreportecliente = new System.Windows.Forms.Button();
+            this.btnreporteproducto = new System.Windows.Forms.Button();
+            this.btnreportes = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnCerrarSesión = new System.Windows.Forms.Button();
             this.btnStockMin = new System.Windows.Forms.Button();
@@ -84,9 +85,9 @@
             this.mnualmacen.SuspendLayout();
             this.mnucompra.SuspendLayout();
             this.mnuventa.SuspendLayout();
-            this.mnureportes.SuspendLayout();
             this.mnuconsultas.SuspendLayout();
             this.mnuconfiguraciones.SuspendLayout();
+            this.mnureportes.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -171,9 +172,9 @@
             this.flowLayoutPanel1.Controls.Add(this.mnualmacen);
             this.flowLayoutPanel1.Controls.Add(this.mnucompra);
             this.flowLayoutPanel1.Controls.Add(this.mnuventa);
-            this.flowLayoutPanel1.Controls.Add(this.mnureportes);
             this.flowLayoutPanel1.Controls.Add(this.mnuconsultas);
             this.flowLayoutPanel1.Controls.Add(this.mnuconfiguraciones);
+            this.flowLayoutPanel1.Controls.Add(this.mnureportes);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.ForeColor = System.Drawing.Color.RoyalBlue;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 67);
@@ -369,18 +370,184 @@
             this.btnventas.UseVisualStyleBackColor = false;
             this.btnventas.Click += new System.EventHandler(this.btnventas_Click);
             // 
+            // mnuconsultas
+            // 
+            this.mnuconsultas.Controls.Add(this.button6);
+            this.mnuconsultas.Controls.Add(this.btnstockminimo);
+            this.mnuconsultas.Controls.Add(this.btncomprafechas);
+            this.mnuconsultas.Controls.Add(this.btnventafechas);
+            this.mnuconsultas.Controls.Add(this.btnconsultas);
+            this.mnuconsultas.Location = new System.Drawing.Point(3, 260);
+            this.mnuconsultas.MaximumSize = new System.Drawing.Size(255, 188);
+            this.mnuconsultas.MinimumSize = new System.Drawing.Size(229, 37);
+            this.mnuconsultas.Name = "mnuconsultas";
+            this.mnuconsultas.Size = new System.Drawing.Size(255, 188);
+            this.mnuconsultas.TabIndex = 7;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(37, 148);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(215, 28);
+            this.button6.TabIndex = 4;
+            this.button6.Text = "Fecha de vencimiento";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // btnstockminimo
+            // 
+            this.btnstockminimo.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnstockminimo.FlatAppearance.BorderSize = 0;
+            this.btnstockminimo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnstockminimo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnstockminimo.ForeColor = System.Drawing.Color.White;
+            this.btnstockminimo.Location = new System.Drawing.Point(37, 114);
+            this.btnstockminimo.Name = "btnstockminimo";
+            this.btnstockminimo.Size = new System.Drawing.Size(215, 28);
+            this.btnstockminimo.TabIndex = 3;
+            this.btnstockminimo.Text = "Stock mínimo";
+            this.btnstockminimo.UseVisualStyleBackColor = false;
+            this.btnstockminimo.Click += new System.EventHandler(this.btnstockminimo_Click);
+            // 
+            // btncomprafechas
+            // 
+            this.btncomprafechas.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btncomprafechas.FlatAppearance.BorderSize = 0;
+            this.btncomprafechas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncomprafechas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncomprafechas.ForeColor = System.Drawing.Color.White;
+            this.btncomprafechas.Location = new System.Drawing.Point(37, 80);
+            this.btncomprafechas.Name = "btncomprafechas";
+            this.btncomprafechas.Size = new System.Drawing.Size(215, 28);
+            this.btncomprafechas.TabIndex = 2;
+            this.btncomprafechas.Text = "Compras por fecha";
+            this.btncomprafechas.UseVisualStyleBackColor = false;
+            this.btncomprafechas.Click += new System.EventHandler(this.btncomprafechas_Click);
+            // 
+            // btnventafechas
+            // 
+            this.btnventafechas.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnventafechas.FlatAppearance.BorderSize = 0;
+            this.btnventafechas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnventafechas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnventafechas.ForeColor = System.Drawing.Color.White;
+            this.btnventafechas.Location = new System.Drawing.Point(37, 46);
+            this.btnventafechas.Name = "btnventafechas";
+            this.btnventafechas.Size = new System.Drawing.Size(215, 28);
+            this.btnventafechas.TabIndex = 1;
+            this.btnventafechas.Text = "Ventas por fecha";
+            this.btnventafechas.UseVisualStyleBackColor = false;
+            this.btnventafechas.Click += new System.EventHandler(this.btnventafechas_Click);
+            // 
+            // btnconsultas
+            // 
+            this.btnconsultas.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnconsultas.FlatAppearance.BorderSize = 0;
+            this.btnconsultas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnconsultas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnconsultas.ForeColor = System.Drawing.Color.White;
+            this.btnconsultas.Image = ((System.Drawing.Image)(resources.GetObject("btnconsultas.Image")));
+            this.btnconsultas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnconsultas.Location = new System.Drawing.Point(3, 3);
+            this.btnconsultas.Name = "btnconsultas";
+            this.btnconsultas.Size = new System.Drawing.Size(249, 37);
+            this.btnconsultas.TabIndex = 0;
+            this.btnconsultas.Text = "Consultas";
+            this.btnconsultas.UseVisualStyleBackColor = false;
+            this.btnconsultas.Click += new System.EventHandler(this.btnconsultas_Click);
+            // 
+            // mnuconfiguraciones
+            // 
+            this.mnuconfiguraciones.Controls.Add(this.btnusuarios);
+            this.mnuconfiguraciones.Controls.Add(this.btnempleados);
+            this.mnuconfiguraciones.Controls.Add(this.btnconfiguraciones);
+            this.mnuconfiguraciones.Location = new System.Drawing.Point(3, 454);
+            this.mnuconfiguraciones.MaximumSize = new System.Drawing.Size(255, 120);
+            this.mnuconfiguraciones.MinimumSize = new System.Drawing.Size(229, 37);
+            this.mnuconfiguraciones.Name = "mnuconfiguraciones";
+            this.mnuconfiguraciones.Size = new System.Drawing.Size(255, 42);
+            this.mnuconfiguraciones.TabIndex = 8;
+            // 
+            // btnusuarios
+            // 
+            this.btnusuarios.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnusuarios.FlatAppearance.BorderSize = 0;
+            this.btnusuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnusuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnusuarios.ForeColor = System.Drawing.Color.White;
+            this.btnusuarios.Location = new System.Drawing.Point(50, 80);
+            this.btnusuarios.Name = "btnusuarios";
+            this.btnusuarios.Size = new System.Drawing.Size(202, 28);
+            this.btnusuarios.TabIndex = 2;
+            this.btnusuarios.Text = "Usuarios";
+            this.btnusuarios.UseVisualStyleBackColor = false;
+            this.btnusuarios.Click += new System.EventHandler(this.btnusuarios_Click);
+            // 
+            // btnempleados
+            // 
+            this.btnempleados.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnempleados.FlatAppearance.BorderSize = 0;
+            this.btnempleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnempleados.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnempleados.ForeColor = System.Drawing.Color.White;
+            this.btnempleados.Location = new System.Drawing.Point(50, 46);
+            this.btnempleados.Name = "btnempleados";
+            this.btnempleados.Size = new System.Drawing.Size(202, 28);
+            this.btnempleados.TabIndex = 1;
+            this.btnempleados.Text = "Empleados";
+            this.btnempleados.UseVisualStyleBackColor = false;
+            this.btnempleados.Click += new System.EventHandler(this.btnempleados_Click);
+            // 
+            // btnconfiguraciones
+            // 
+            this.btnconfiguraciones.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnconfiguraciones.FlatAppearance.BorderSize = 0;
+            this.btnconfiguraciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnconfiguraciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnconfiguraciones.ForeColor = System.Drawing.Color.White;
+            this.btnconfiguraciones.Image = ((System.Drawing.Image)(resources.GetObject("btnconfiguraciones.Image")));
+            this.btnconfiguraciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnconfiguraciones.Location = new System.Drawing.Point(3, 3);
+            this.btnconfiguraciones.Name = "btnconfiguraciones";
+            this.btnconfiguraciones.Size = new System.Drawing.Size(249, 37);
+            this.btnconfiguraciones.TabIndex = 0;
+            this.btnconfiguraciones.Text = "Configuraciones";
+            this.btnconfiguraciones.UseVisualStyleBackColor = false;
+            this.btnconfiguraciones.Click += new System.EventHandler(this.btnconfiguraciones_Click);
+            // 
             // mnureportes
             // 
+            this.mnureportes.Controls.Add(this.btnreportesventas);
             this.mnureportes.Controls.Add(this.btnreporteempleado);
             this.mnureportes.Controls.Add(this.btnreportecliente);
             this.mnureportes.Controls.Add(this.btnreporteproducto);
             this.mnureportes.Controls.Add(this.btnreportes);
-            this.mnureportes.Location = new System.Drawing.Point(3, 260);
-            this.mnureportes.MaximumSize = new System.Drawing.Size(255, 150);
+            this.mnureportes.Location = new System.Drawing.Point(3, 502);
+            this.mnureportes.MaximumSize = new System.Drawing.Size(255, 190);
             this.mnureportes.MinimumSize = new System.Drawing.Size(229, 37);
             this.mnureportes.Name = "mnureportes";
-            this.mnureportes.Size = new System.Drawing.Size(255, 150);
+            this.mnureportes.Size = new System.Drawing.Size(255, 46);
             this.mnureportes.TabIndex = 8;
+            // 
+            // btnreportesventas
+            // 
+            this.btnreportesventas.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnreportesventas.FlatAppearance.BorderSize = 0;
+            this.btnreportesventas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnreportesventas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnreportesventas.ForeColor = System.Drawing.Color.White;
+            this.btnreportesventas.Location = new System.Drawing.Point(50, 148);
+            this.btnreportesventas.Name = "btnreportesventas";
+            this.btnreportesventas.Size = new System.Drawing.Size(202, 28);
+            this.btnreportesventas.TabIndex = 4;
+            this.btnreportesventas.Text = "Ventas";
+            this.btnreportesventas.UseVisualStyleBackColor = false;
+            this.btnreportesventas.Click += new System.EventHandler(this.btnreportesventas_Click);
             // 
             // btnreporteempleado
             // 
@@ -444,152 +611,6 @@
             this.btnreportes.UseVisualStyleBackColor = false;
             this.btnreportes.Click += new System.EventHandler(this.btnreportes_Click);
             // 
-            // mnuconsultas
-            // 
-            this.mnuconsultas.Controls.Add(this.button6);
-            this.mnuconsultas.Controls.Add(this.btnstockminimo);
-            this.mnuconsultas.Controls.Add(this.btncomprafechas);
-            this.mnuconsultas.Controls.Add(this.btnventafechas);
-            this.mnuconsultas.Controls.Add(this.btnconsultas);
-            this.mnuconsultas.Location = new System.Drawing.Point(3, 416);
-            this.mnuconsultas.MaximumSize = new System.Drawing.Size(255, 188);
-            this.mnuconsultas.MinimumSize = new System.Drawing.Size(229, 37);
-            this.mnuconsultas.Name = "mnuconsultas";
-            this.mnuconsultas.Size = new System.Drawing.Size(255, 43);
-            this.mnuconsultas.TabIndex = 7;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(37, 148);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(215, 28);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "Fecha de vencimiento";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // btnstockminimo
-            // 
-            this.btnstockminimo.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnstockminimo.FlatAppearance.BorderSize = 0;
-            this.btnstockminimo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnstockminimo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnstockminimo.ForeColor = System.Drawing.Color.White;
-            this.btnstockminimo.Location = new System.Drawing.Point(37, 114);
-            this.btnstockminimo.Name = "btnstockminimo";
-            this.btnstockminimo.Size = new System.Drawing.Size(215, 28);
-            this.btnstockminimo.TabIndex = 3;
-            this.btnstockminimo.Text = "Stock mínimo";
-            this.btnstockminimo.UseVisualStyleBackColor = false;
-            // 
-            // btncomprafechas
-            // 
-            this.btncomprafechas.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btncomprafechas.FlatAppearance.BorderSize = 0;
-            this.btncomprafechas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btncomprafechas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncomprafechas.ForeColor = System.Drawing.Color.White;
-            this.btncomprafechas.Location = new System.Drawing.Point(37, 80);
-            this.btncomprafechas.Name = "btncomprafechas";
-            this.btncomprafechas.Size = new System.Drawing.Size(215, 28);
-            this.btncomprafechas.TabIndex = 2;
-            this.btncomprafechas.Text = "Compras por fecha";
-            this.btncomprafechas.UseVisualStyleBackColor = false;
-            // 
-            // btnventafechas
-            // 
-            this.btnventafechas.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnventafechas.FlatAppearance.BorderSize = 0;
-            this.btnventafechas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnventafechas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnventafechas.ForeColor = System.Drawing.Color.White;
-            this.btnventafechas.Location = new System.Drawing.Point(37, 46);
-            this.btnventafechas.Name = "btnventafechas";
-            this.btnventafechas.Size = new System.Drawing.Size(215, 28);
-            this.btnventafechas.TabIndex = 1;
-            this.btnventafechas.Text = "Ventas por fecha";
-            this.btnventafechas.UseVisualStyleBackColor = false;
-            // 
-            // btnconsultas
-            // 
-            this.btnconsultas.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnconsultas.FlatAppearance.BorderSize = 0;
-            this.btnconsultas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnconsultas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnconsultas.ForeColor = System.Drawing.Color.White;
-            this.btnconsultas.Image = ((System.Drawing.Image)(resources.GetObject("btnconsultas.Image")));
-            this.btnconsultas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnconsultas.Location = new System.Drawing.Point(3, 3);
-            this.btnconsultas.Name = "btnconsultas";
-            this.btnconsultas.Size = new System.Drawing.Size(249, 37);
-            this.btnconsultas.TabIndex = 0;
-            this.btnconsultas.Text = "Consultas";
-            this.btnconsultas.UseVisualStyleBackColor = false;
-            this.btnconsultas.Click += new System.EventHandler(this.btnconsultas_Click);
-            // 
-            // mnuconfiguraciones
-            // 
-            this.mnuconfiguraciones.Controls.Add(this.btnusuarios);
-            this.mnuconfiguraciones.Controls.Add(this.btnempleados);
-            this.mnuconfiguraciones.Controls.Add(this.btnconfiguraciones);
-            this.mnuconfiguraciones.Location = new System.Drawing.Point(3, 465);
-            this.mnuconfiguraciones.MaximumSize = new System.Drawing.Size(255, 120);
-            this.mnuconfiguraciones.MinimumSize = new System.Drawing.Size(229, 37);
-            this.mnuconfiguraciones.Name = "mnuconfiguraciones";
-            this.mnuconfiguraciones.Size = new System.Drawing.Size(255, 42);
-            this.mnuconfiguraciones.TabIndex = 8;
-            // 
-            // btnusuarios
-            // 
-            this.btnusuarios.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnusuarios.FlatAppearance.BorderSize = 0;
-            this.btnusuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnusuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnusuarios.ForeColor = System.Drawing.Color.White;
-            this.btnusuarios.Location = new System.Drawing.Point(50, 80);
-            this.btnusuarios.Name = "btnusuarios";
-            this.btnusuarios.Size = new System.Drawing.Size(202, 28);
-            this.btnusuarios.TabIndex = 2;
-            this.btnusuarios.Text = "Usuarios";
-            this.btnusuarios.UseVisualStyleBackColor = false;
-            this.btnusuarios.Click += new System.EventHandler(this.btnusuarios_Click);
-            // 
-            // btnempleados
-            // 
-            this.btnempleados.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnempleados.FlatAppearance.BorderSize = 0;
-            this.btnempleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnempleados.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnempleados.ForeColor = System.Drawing.Color.White;
-            this.btnempleados.Location = new System.Drawing.Point(50, 46);
-            this.btnempleados.Name = "btnempleados";
-            this.btnempleados.Size = new System.Drawing.Size(202, 28);
-            this.btnempleados.TabIndex = 1;
-            this.btnempleados.Text = "Empleados";
-            this.btnempleados.UseVisualStyleBackColor = false;
-            this.btnempleados.Click += new System.EventHandler(this.btnempleados_Click);
-            // 
-            // btnconfiguraciones
-            // 
-            this.btnconfiguraciones.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnconfiguraciones.FlatAppearance.BorderSize = 0;
-            this.btnconfiguraciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnconfiguraciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnconfiguraciones.ForeColor = System.Drawing.Color.White;
-            this.btnconfiguraciones.Image = ((System.Drawing.Image)(resources.GetObject("btnconfiguraciones.Image")));
-            this.btnconfiguraciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnconfiguraciones.Location = new System.Drawing.Point(3, 3);
-            this.btnconfiguraciones.Name = "btnconfiguraciones";
-            this.btnconfiguraciones.Size = new System.Drawing.Size(249, 37);
-            this.btnconfiguraciones.TabIndex = 0;
-            this.btnconfiguraciones.Text = "Configuraciones";
-            this.btnconfiguraciones.UseVisualStyleBackColor = false;
-            this.btnconfiguraciones.Click += new System.EventHandler(this.btnconfiguraciones_Click);
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.btnCerrarSesión);
@@ -643,6 +664,7 @@
             this.btnStockMin.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnStockMin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnStockMin.UseVisualStyleBackColor = false;
+            this.btnStockMin.Click += new System.EventHandler(this.btnStockMin_Click);
             // 
             // btnAtajoEmpleados
             // 
@@ -768,9 +790,9 @@
             this.mnualmacen.ResumeLayout(false);
             this.mnucompra.ResumeLayout(false);
             this.mnuventa.ResumeLayout(false);
-            this.mnureportes.ResumeLayout(false);
             this.mnuconsultas.ResumeLayout(false);
             this.mnuconfiguraciones.ResumeLayout(false);
+            this.mnureportes.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -822,5 +844,6 @@
         private System.Windows.Forms.Button btnAtajoEmpleados;
         private System.Windows.Forms.Button btnCerrarSesión;
         public System.Windows.Forms.Button button6;
+        public System.Windows.Forms.Button btnreportesventas;
     }
 }

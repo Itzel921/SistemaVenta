@@ -4,5 +4,8 @@
 
     partial class DsPrincipal
     {
+        partial class DataTable_ComprasDataTable
+        {
+        }
     }
 }

@@ -77,5 +77,18 @@ namespace CapaNegocio
             return Datos.BuscarNombre(Datos);
         }
 
+
+        public static DataTable ConsultarStockMinimo()
+        {
+            CDProducto Datos = new CDProducto();
+            return Datos.ConsultarStockMinimo();
+        }
+
+        public static DataTable ConsultarVencimiento()
+        {
+            CDProducto Datos = new CDProducto();
+            return Datos.ConsultarVencimiento();
+        }
+
     }
 }

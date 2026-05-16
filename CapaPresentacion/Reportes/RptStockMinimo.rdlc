@@ -2,20 +2,20 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
-      <Tablix Name="Tablix2">
+      <Tablix Name="Tablix1">
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.19617cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.55833cm</Width>
+              <Width>3.30433cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.4525cm</Width>
+              <Width>4.55317cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.21967cm</Width>
+              <Width>3.79117cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -24,21 +24,21 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox8">
+                    <Textbox Name="Textbox2">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>documento</Value>
+                              <Value>codigo</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox8</rd:DefaultName>
+                      <rd:DefaultName>Textbox2</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -54,7 +54,37 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox10">
+                    <Textbox Name="Textbox3">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>categoria</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox3</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox4">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -68,7 +98,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox10</rd:DefaultName>
+                      <rd:DefaultName>Textbox4</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -84,51 +114,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox12">
+                    <Textbox Name="Textbox7">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>apellidos</Value>
+                              <Value>stock</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox12</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox14">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>cargo</Value>
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox14</rd:DefaultName>
+                      <rd:DefaultName>Textbox7</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -149,21 +149,51 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="documento">
+                    <Textbox Name="codigo">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!documento.Value</Value>
+                              <Value>=Fields!codigo.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>documento</rd:DefaultName>
+                      <rd:DefaultName>codigo</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="categoria">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!categoria.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>categoria</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -209,21 +239,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="apellidos">
+                    <Textbox Name="stock1">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!apellidos.Value</Value>
+                              <Value>=Fields!stock.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>apellidos</rd:DefaultName>
+                      <rd:DefaultName>stock1</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -235,36 +265,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="cargo">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!cargo.Value</Value>
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>cargo</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -289,11 +290,11 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DataSet_Empleados</DataSetName>
-        <Top>1.39983cm</Top>
-        <Left>1.2827cm</Left>
+        <DataSetName>DataTable_Productos</DataSetName>
+        <Top>1.46333cm</Top>
+        <Left>1.26153cm</Left>
         <Height>1.2cm</Height>
-        <Width>12.7305cm</Width>
+        <Width>13.84484cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -309,10 +310,10 @@
       </Border>
     </Style>
   </Body>
-  <Width>7.39109in</Width>
+  <Width>7.86667in</Width>
   <Page>
     <PageHeader>
-      <Height>2.69803cm</Height>
+      <Height>3.05787cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -320,9 +321,9 @@
           <Source>Embedded</Source>
           <Value>w</Value>
           <Sizing>FitProportional</Sizing>
-          <Left>1.0287cm</Left>
-          <Height>2.69803cm</Height>
-          <Width>3.5955cm</Width>
+          <Left>0.9652cm</Left>
+          <Height>3.05787cm</Height>
+          <Width>4.20933cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -336,11 +337,12 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>LISTADO DE EMPLEADOS</Value>
+                  <Value>LISTADO DE PRODUCTOS CON STOCK MINIMO</Value>
                   <Style>
                     <FontFamily>UD Digi Kyokasho NK</FontFamily>
                     <FontSize>16pt</FontSize>
-                    <FontWeight>Bold</FontWeight>
+                    <FontWeight>Normal</FontWeight>
+                    <TextDecoration>None</TextDecoration>
                     <Color>OliveDrab</Color>
                   </Style>
                 </TextRun>
@@ -349,10 +351,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>1.58298cm</Top>
-          <Left>4.80059cm</Left>
-          <Height>0.93866cm</Height>
-          <Width>8.00333cm</Width>
+          <Top>1.54064cm</Top>
+          <Left>5.55554cm</Left>
+          <Height>1.34084cm</Height>
+          <Width>8.49017cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -387,37 +389,45 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>34bc3e69-b8e7-44e5-92b8-401b76e61ddb</rd:DataSourceID>
+      <rd:DataSourceID>7fda18b7-f11a-4802-981a-42e79a120292</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSet_Empleados">
+    <DataSet Name="DataTable_Productos">
       <Query>
         <DataSourceName>DsPrincipal</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="documento">
-          <DataField>documento</DataField>
+        <Field Name="idproducto">
+          <DataField>idproducto</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="codigo">
+          <DataField>codigo</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="nombre">
           <DataField>nombre</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="apellidos">
-          <DataField>apellidos</DataField>
+        <Field Name="categoria">
+          <DataField>categoria</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="cargo">
-          <DataField>cargo</DataField>
+        <Field Name="stock">
+          <DataField>stock</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="precio_venta">
+          <DataField>precio_venta</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DsPrincipal</rd:DataSetName>
         <rd:SchemaPath>C:\Users\Itzel\source\repos\SistemaVentas\CapaPresentacion\Reportes\DsPrincipal.xsd</rd:SchemaPath>
-        <rd:TableName>DataTable_Empleados</rd:TableName>
+        <rd:TableName>DataTable_Productos</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
         <rd:TableAdapterName />
@@ -568,5 +578,5 @@ AuBSyIjTIZHWZ80QXTu02saeLu7mabxpY7V/8z96Z3zD6dP6gQcesMTMS0FVvutf/HT7h4996vil04++
     </EmbeddedImage>
   </EmbeddedImages>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>d3dc6909-fe45-4b74-96e7-3b4158b0aa30</rd:ReportID>
+  <rd:ReportID>76181c52-a1cd-45d6-bce6-41743e2633db</rd:ReportID>
 </Report>

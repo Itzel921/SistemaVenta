@@ -293,7 +293,7 @@
         <Top>1.17687cm</Top>
         <Left>1.26153cm</Left>
         <Height>1.2cm</Height>
-        <Width>12.66cm</Width>
+        <Width>12.65999cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -338,7 +338,7 @@
                   <Value>LISTADO DE CLIENTES</Value>
                   <Style>
                     <FontFamily>UD Digi Kyokasho NK</FontFamily>
-                    <FontSize>14pt</FontSize>
+                    <FontSize>16pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                     <Color>OliveDrab</Color>
                   </Style>
@@ -349,9 +349,9 @@
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
           <Top>1.55787cm</Top>
-          <Left>7.14587cm</Left>
-          <Height>0.6cm</Height>
-          <Width>6.35233cm</Width>
+          <Left>4.67359cm</Left>
+          <Height>0.80574cm</Height>
+          <Width>7.85516cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>

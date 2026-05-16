@@ -432,8 +432,8 @@
     <Height>2in</Height>
     <Style>
       <Border>
-        <Style>Double</Style>
-        <Width>1.5pt</Width>
+        <Style>Dotted</Style>
+        <Width>1.25pt</Width>
       </Border>
     </Style>
   </Body>
@@ -448,10 +448,9 @@
           <Source>Embedded</Source>
           <Value>w</Value>
           <Sizing>FitProportional</Sizing>
-          <Top>0.20461cm</Top>
           <Left>0.79587cm</Left>
-          <Height>2.3382cm</Height>
-          <Width>3.25683cm</Width>
+          <Height>2.54281cm</Height>
+          <Width>3.43322cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -468,7 +467,7 @@
                   <Value>LISTADO DE PRODUCTOS</Value>
                   <Style>
                     <FontFamily>UD Digi Kyokasho NK</FontFamily>
-                    <FontSize>14pt</FontSize>
+                    <FontSize>16pt</FontSize>
                     <FontWeight>Normal</FontWeight>
                     <Color>OliveDrab</Color>
                   </Style>
@@ -479,9 +478,9 @@
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
           <Top>1.68881cm</Top>
-          <Left>8.82037cm</Left>
-          <Height>0.6cm</Height>
-          <Width>7.02967cm</Width>
+          <Left>4.22909cm</Left>
+          <Height>0.854cm</Height>
+          <Width>7.81284cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>

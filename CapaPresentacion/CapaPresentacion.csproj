@@ -122,6 +122,30 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FrmConsultaCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaCompras.Designer.cs">
+      <DependentUpon>FrmConsultaCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultaStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaStock.Designer.cs">
+      <DependentUpon>FrmConsultaStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultaVencimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaVencimiento.Designer.cs">
+      <DependentUpon>FrmConsultaVencimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultaVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaVentas.Designer.cs">
+      <DependentUpon>FrmConsultaVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmInicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,6 +245,12 @@
     <Compile Include="FrmReporteCliente.Designer.cs">
       <DependentUpon>FrmReporteCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmReporteComprasFechas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReporteComprasFechas.Designer.cs">
+      <DependentUpon>FrmReporteComprasFechas.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmReporteEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -232,6 +262,24 @@
     </Compile>
     <Compile Include="FrmReporteProducto.Designer.cs">
       <DependentUpon>FrmReporteProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReporteStockMinimo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReporteStockMinimo.Designer.cs">
+      <DependentUpon>FrmReporteStockMinimo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReporteVencimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReporteVencimiento.Designer.cs">
+      <DependentUpon>FrmReporteVencimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReporteVentasFechas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReporteVentasFechas.Designer.cs">
+      <DependentUpon>FrmReporteVentasFechas.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmVistaCliente.cs">
       <SubType>Form</SubType>
@@ -285,6 +333,18 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FrmConsultaCompras.resx">
+      <DependentUpon>FrmConsultaCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaStock.resx">
+      <DependentUpon>FrmConsultaStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaVencimiento.resx">
+      <DependentUpon>FrmConsultaVencimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaVentas.resx">
+      <DependentUpon>FrmConsultaVentas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmInicio.resx">
       <DependentUpon>FrmInicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -336,11 +396,23 @@
     <EmbeddedResource Include="FrmReporteCliente.resx">
       <DependentUpon>FrmReporteCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmReporteComprasFechas.resx">
+      <DependentUpon>FrmReporteComprasFechas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmReporteEmpleado.resx">
       <DependentUpon>FrmReporteEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmReporteProducto.resx">
       <DependentUpon>FrmReporteProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReporteStockMinimo.resx">
+      <DependentUpon>FrmReporteStockMinimo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReporteVencimiento.resx">
+      <DependentUpon>FrmReporteVencimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReporteVentasFechas.resx">
+      <DependentUpon>FrmReporteVentasFechas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVistaCliente.resx">
       <DependentUpon>FrmVistaCliente.cs</DependentUpon>
@@ -360,8 +432,12 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\RptClientes.rdlc" />
+    <EmbeddedResource Include="Reportes\RptComprasFechas.rdlc" />
     <EmbeddedResource Include="Reportes\RptEmpleados.rdlc" />
     <EmbeddedResource Include="Reportes\RptProductos.rdlc" />
+    <EmbeddedResource Include="Reportes\RptStockMinimo.rdlc" />
+    <EmbeddedResource Include="Reportes\RptVencimiento.rdlc" />
+    <EmbeddedResource Include="Reportes\RptVentasFechas.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

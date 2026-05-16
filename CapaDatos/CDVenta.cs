@@ -20,6 +20,8 @@ namespace CapaDatos
         public decimal Precio { get; set; }
         public int IdVenta { get; set; }
         public int IdProducto { get; set; }
+        public DateTime FechaInicio { get; set; }
+        public DateTime FechaFin { get; set; }
 
         public int Guardar(CDVenta ven)
         {
@@ -94,6 +96,38 @@ namespace CapaDatos
                 if (conexion.State == ConnectionState.Open) conexion.Close();
             }
             return resul;
+        }
+
+
+        public DataTable ConsultarVentasPorFecha(CDVenta ven)
+        {
+            DataTable dtResultado = new DataTable();
+            SqlConnection conexion = new SqlConnection();
+            try
+            {
+                conexion.ConnectionString = Conexion.Conn;
+                conexion.Open();
+
+                SqlCommand Cmd = new SqlCommand("sp_consultar_ventas_fecha", conexion);
+                Cmd.CommandType = CommandType.StoredProcedure;
+
+                // Pasamos las fechas asegurando el formato correcto para SQL
+                Cmd.Parameters.AddWithValue("@fechaInicio", ven.FechaInicio);
+                Cmd.Parameters.AddWithValue("@fechaFin", ven.FechaFin);
+
+                SqlDataAdapter da = new SqlDataAdapter(Cmd);  
+                da.Fill(dtResultado);
+                return dtResultado;
+            }
+
+            catch (Exception ex)
+            {
+                return null;
+            }
+            finally
+            {
+                if (conexion.State == ConnectionState.Open) conexion.Close();
+            }      
         }
     }
 }

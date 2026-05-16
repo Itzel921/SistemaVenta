@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-    partial class FrmReporteEmpleado
+    partial class FrmReporteStockMinimo
     {
         /// <summary>
         /// Required designer variable.
@@ -33,25 +33,27 @@
             // 
             // reportViewer1
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "CapaPresentacion.Reportes.RptEmpleados.rdlc";
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "CapaPresentacion.Reportes.RptStockMinimo.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(920, 470);
+            this.reportViewer1.Size = new System.Drawing.Size(930, 397);
             this.reportViewer1.TabIndex = 0;
             // 
-            // FrmReporteEmpleado
+            // FrmReporteStockMinimo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(920, 470);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(930, 397);
             this.Controls.Add(this.reportViewer1);
             this.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.Name = "FrmReporteEmpleado";
-            this.Load += new System.EventHandler(this.FrmReporteEmpleado_Load);
+            this.Name = "FrmReporteStockMinimo";
+            this.Load += new System.EventHandler(this.FrmReporteStockMinimo_Load);
             this.ResumeLayout(false);
 
         }

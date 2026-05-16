@@ -598,4 +598,100 @@ BEGIN
     WHERE idproducto = @idproducto;
 END
 
+
+
+
+
+
+
+
+
+
+CREATE PROC sp_consultar_ventas_fecha
+    @fechaInicio DATE,
+    @fechaFin DATE
+AS
+BEGIN
+    SELECT 
+        v.idventa,
+        c.nombre + ' ' + c.apellidos AS cliente,
+        v.fecha,
+        e.nombre + ' ' + e.apellidos AS empleado,
+        v.tipo_documento,
+        v.serie,
+        v.num_documento
+    FROM venta v
+    INNER JOIN cliente c ON v.idcliente = c.idcliente
+    INNER JOIN empleado e ON e.idempleado = e.idempleado 
+    WHERE CONVERT(DATE, v.fecha) BETWEEN @fechaInicio AND @fechaFin
+    ORDER BY v.idventa DESC;
+END
+
+
+
+
+CREATE PROC sp_consultar_compras_fecha
+    @fechaInicio DATE,
+    @fechaFin DATE
+AS
+BEGIN
+    SELECT 
+        c.idcompra,
+        p.razonsocial,
+        c.fecha,
+        e.nombre + ' ' + e.apellidos AS [Empleado],
+        c.tipo_documento,
+        c.num_documento,
+        c.estado,
+        c.subtotal,
+        c.iva,
+        c.total
+    FROM compra c
+    INNER JOIN proveedor p ON c.idproveedor = p.idproveedor
+    INNER JOIN empleado e ON c.idusuario = e.idempleado 
+    WHERE CONVERT(DATE, c.fecha) BETWEEN @fechaInicio AND @fechaFin
+    ORDER BY c.idcompra DESC;
+END
+
+
+
+
+CREATE PROC sp_consultar_stock_minimo
+AS
+BEGIN
+    SELECT 
+        p.idproducto,
+        p.codigo,
+        p.nombre,
+        c.descripcion AS categoria,
+		p.stock,
+        p.precio_venta
+    FROM producto p
+    INNER JOIN categoria c ON p.id_categoria = c.idcategoria
+    WHERE p.stock <= 5 -- Tu límite de alerta
+    ORDER BY p.stock ASC;
+END;
+
+
+
+
+
+CREATE PROC sp_consultar_vencimiento
+AS
+BEGIN
+    SELECT 
+        p.idproducto,
+        p.codigo,
+        p.nombre,
+        c.descripcion AS categoria,
+		p.precio_venta,
+        p.stock,
+        p.f_vencimiento
+    FROM producto p
+    INNER JOIN categoria c ON p.id_categoria = c.idcategoria
+    
+    WHERE p.f_vencimiento <= DATEADD(day, 15, GETDATE()) 
+    ORDER BY p.f_vencimiento ASC; -- Los más urgentes salen hasta arriba
+END
+
 SELECT * FROM usuario

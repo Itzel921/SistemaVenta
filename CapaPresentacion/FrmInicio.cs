@@ -348,13 +348,11 @@ namespace CapaPresentacion
 
         private void AbrirFormulario(Form formulario)
         {
-            // Cerramos todos los formularios hijos abiertos actualmente
             foreach (Form hijo in this.MdiChildren)
             {
                 hijo.Close();
             }
 
-            // Configuramos y mostramos el nuevo formulario
             formulario.MdiParent = this;
             formulario.Dock = DockStyle.Fill; // hace que se pegue perfectamente desde la esquina superior izquierda cubriendo toda el área gris.
             formulario.Show(); 
@@ -385,6 +383,46 @@ namespace CapaPresentacion
             AbrirFormulario(new FrmRegistrarCompra());
         }
 
-        
+        private void btnventafechas_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new FrmConsultaVentas());
+
+            mnuconfiguraciones.Width = 214;
+            mnuconfiguraciones.Height = 37;
+        }
+
+        private void btnreportesventas_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new FrmReporteVentasFechas());
+
+            mnualmacen.Width = 214;
+            mnualmacen.Height = 37;
+        }
+
+        private void btncomprafechas_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new FrmConsultaCompras());
+
+            mnualmacen.Width = 214;
+            mnualmacen.Height = 37;
+        }
+
+        private void btnstockminimo_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new FrmConsultaStock());
+
+            mnualmacen.Width = 214;
+            mnualmacen.Height = 37;
+        }
+
+        private void btnStockMin_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new FrmConsultaStock());
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new FrmConsultaVencimiento());
+        }
     }
 }

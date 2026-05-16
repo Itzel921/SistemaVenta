@@ -273,5 +273,55 @@ namespace CapaDatos
         }
 
 
+
+        public DataTable ConsultarStockMinimo()
+        {
+            DataTable dtResultado = new DataTable();
+            SqlConnection conexion = new SqlConnection();
+            try
+            {
+                conexion.ConnectionString = Conexion.Conn;
+                SqlCommand Cmd = new SqlCommand("sp_consultar_stock_minimo", conexion);
+                Cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlDataAdapter da = new SqlDataAdapter(Cmd);
+                da.Fill(dtResultado);
+                return dtResultado;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            finally
+            {
+                if (conexion.State == ConnectionState.Open) conexion.Close();
+            }
+        }
+
+
+
+        public DataTable ConsultarVencimiento()
+        {
+            DataTable dtResultado = new DataTable();
+            SqlConnection conexion = new SqlConnection();
+            try
+            {
+                conexion.ConnectionString = Conexion.Conn;
+                SqlCommand Cmd = new SqlCommand("sp_consultar_vencimiento", conexion);
+                Cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlDataAdapter da = new SqlDataAdapter(Cmd);
+                da.Fill(dtResultado);
+                return dtResultado;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            finally
+            {
+                if (conexion.State == ConnectionState.Open) conexion.Close();
+            }
+        }
     }
 }
