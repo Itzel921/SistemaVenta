@@ -381,7 +381,7 @@
             this.mnuconsultas.MaximumSize = new System.Drawing.Size(255, 188);
             this.mnuconsultas.MinimumSize = new System.Drawing.Size(229, 37);
             this.mnuconsultas.Name = "mnuconsultas";
-            this.mnuconsultas.Size = new System.Drawing.Size(255, 188);
+            this.mnuconsultas.Size = new System.Drawing.Size(255, 43);
             this.mnuconsultas.TabIndex = 7;
             // 
             // button6
@@ -466,7 +466,7 @@
             this.mnuconfiguraciones.Controls.Add(this.btnusuarios);
             this.mnuconfiguraciones.Controls.Add(this.btnempleados);
             this.mnuconfiguraciones.Controls.Add(this.btnconfiguraciones);
-            this.mnuconfiguraciones.Location = new System.Drawing.Point(3, 454);
+            this.mnuconfiguraciones.Location = new System.Drawing.Point(3, 309);
             this.mnuconfiguraciones.MaximumSize = new System.Drawing.Size(255, 120);
             this.mnuconfiguraciones.MinimumSize = new System.Drawing.Size(229, 37);
             this.mnuconfiguraciones.Name = "mnuconfiguraciones";
@@ -527,7 +527,7 @@
             this.mnureportes.Controls.Add(this.btnreportecliente);
             this.mnureportes.Controls.Add(this.btnreporteproducto);
             this.mnureportes.Controls.Add(this.btnreportes);
-            this.mnureportes.Location = new System.Drawing.Point(3, 502);
+            this.mnureportes.Location = new System.Drawing.Point(3, 357);
             this.mnureportes.MaximumSize = new System.Drawing.Size(255, 190);
             this.mnureportes.MinimumSize = new System.Drawing.Size(229, 37);
             this.mnureportes.Name = "mnureportes";

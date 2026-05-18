@@ -248,8 +248,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmRegistrarProveedor";
-            this.Text = "FrmRegistrarProveedor";
             this.Load += new System.EventHandler(this.FrmRegistrarProveedor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

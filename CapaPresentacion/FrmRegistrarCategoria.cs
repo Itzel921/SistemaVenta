@@ -56,9 +56,7 @@ namespace CapaPresentacion
                     this.Insert = false;
                     this.Edit = false;
 
-                    FrmListadoCategoria form = new FrmListadoCategoria();
-                    form.Show();
-                    this.Hide();
+                    this.Close();
 
                 }
             }
@@ -71,9 +69,7 @@ namespace CapaPresentacion
 
         private void btncancelar_Click(object sender, EventArgs e)
         {
-            FrmListadoCategoria form = new FrmListadoCategoria();
-            form.Show();    
-            this.Hide();
+            this.Close();
         }
     }
     }

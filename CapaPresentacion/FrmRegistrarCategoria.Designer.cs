@@ -112,8 +112,9 @@
             this.Controls.Add(this.txtdescripcion);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Name = "FrmRegistrarCategoria";
-            this.Text = "FrmRegistrarCategoria";
             this.Load += new System.EventHandler(this.FrmRegistrarCategoria_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

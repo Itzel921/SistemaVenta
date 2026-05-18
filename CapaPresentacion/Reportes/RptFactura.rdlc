@@ -543,7 +543,7 @@
         </TablixRowHierarchy>
         <DataSetName>DataTable_Factura</DataSetName>
         <Top>5.50617cm</Top>
-        <Left>2.57178cm</Left>
+        <Left>3.35495cm</Left>
         <Height>1.2cm</Height>
         <Width>19.81417cm</Width>
         <ZIndex>5</ZIndex>
@@ -807,7 +807,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox17</rd:DefaultName>
         <Top>3.37045cm</Top>
-        <Left>14.40145cm</Left>
+        <Left>14.71895cm</Left>
         <Height>0.87911cm</Height>
         <Width>6.98733cm</Width>
         <ZIndex>13</ZIndex>

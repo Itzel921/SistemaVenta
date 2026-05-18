@@ -49,27 +49,26 @@ namespace CapaPresentacion
         private void btnnuevo_Click(object sender, EventArgs e)
         {
             FrmRegistrarCategoria form = new FrmRegistrarCategoria();
-            form.Show();
-            form.Insert = true;
-            this.Hide();
+            form.Insert = true; 
+            form.ShowDialog();
+            this.Mostrar();
         }
 
-           
         private void btneditar_Click(object sender, EventArgs e)
         {
-        
-            FrmRegistrarCategoria form = new FrmRegistrarCategoria();
+            if (this.dlistado.CurrentRow != null)
+    {
+        FrmRegistrarCategoria form = new FrmRegistrarCategoria();
+        form.Edit = true;
+        form.Insert = false;
 
-            form.Edit = true;
-            form.Insert = false;
+        form.txtidcategoria.Text = this.dlistado.CurrentRow.Cells["idcategoria"].Value.ToString();
+        form.txtdescripcion.Text = this.dlistado.CurrentRow.Cells["descripcion"].Value.ToString();
 
-            form.txtidcategoria.Text = this.dlistado.CurrentRow.Cells["idcategoria"].Value.ToString();
-            form.txtdescripcion.Text = this.dlistado.CurrentRow.Cells["descripcion"].Value.ToString();
-
-            form.Show();
-            this.Hide();
-        
+        form.ShowDialog();
+        this.Mostrar(); 
     }
+        }
 
         private void btnsalir_Click_1(object sender, EventArgs e)
         {

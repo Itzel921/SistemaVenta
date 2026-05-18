@@ -50,10 +50,9 @@ namespace CapaPresentacion
         {
             FrmRegistrarUsuario form = new FrmRegistrarUsuario();
 
-            form.Show();
             form.Insert = true;
-            form.Edit = false;
-            this.Hide();
+            form.ShowDialog();
+            this.Mostrar();
         }
 
         private void btneditar_Click(object sender, EventArgs e)
@@ -81,8 +80,8 @@ namespace CapaPresentacion
                 form.rbtninactivo.Checked = true;
             }
 
-            form.Show();
-            this.Hide();
+            form.ShowDialog();
+            this.Mostrar();
         }
 
         private void btneliminar_Click(object sender, EventArgs e)

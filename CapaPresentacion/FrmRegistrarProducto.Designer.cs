@@ -56,8 +56,8 @@
             this.cboidcategoria = new System.Windows.Forms.ComboBox();
             this.picCodigoBarras = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnGenerar = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
+            this.btnGenerar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.txtcantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCodigoBarras)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -356,6 +356,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Generar Código de barras";
             // 
+            // btnImprimir
+            // 
+            this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImprimir.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnImprimir.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnImprimir.Location = new System.Drawing.Point(192, 191);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(115, 34);
+            this.btnImprimir.TabIndex = 54;
+            this.btnImprimir.Text = "&Imprimir";
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            // 
             // btnGenerar
             // 
             this.btnGenerar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -368,18 +380,6 @@
             this.btnGenerar.Text = "&Generar";
             this.btnGenerar.UseVisualStyleBackColor = true;
             this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
-            // 
-            // btnImprimir
-            // 
-            this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImprimir.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btnImprimir.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnImprimir.Location = new System.Drawing.Point(192, 191);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(115, 34);
-            this.btnImprimir.TabIndex = 54;
-            this.btnImprimir.Text = "&Imprimir";
-            this.btnImprimir.UseVisualStyleBackColor = true;
             // 
             // FrmRegistrarProducto
             // 
@@ -413,11 +413,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.Name = "FrmRegistrarProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "FrmRegistrarProducto";
             this.Load += new System.EventHandler(this.FrmRegistrarProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtcantidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCodigoBarras)).EndInit();

@@ -50,10 +50,9 @@
             this.Controls.Add(this.reportViewer1);
             this.Font = new System.Drawing.Font("UD Digi Kyokasho NK", 10.2F, System.Drawing.FontStyle.Bold);
             this.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmReporteProducto";
-            this.Text = "FrmReporteProducto";
             this.Load += new System.EventHandler(this.FrmReporteProducto_Load);
             this.ResumeLayout(false);
 

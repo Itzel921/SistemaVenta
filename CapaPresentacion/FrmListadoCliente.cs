@@ -285,7 +285,7 @@ namespace CapaPresentacion
             form.Insert = true;
 
             form.ShowDialog();
-            this.Hide();
+            this.Mostrar();
             
         }
 
@@ -314,8 +314,8 @@ namespace CapaPresentacion
                 form.rbtninactivo.Checked = true;
             }
 
-            form.Show();
-            this.Hide();
+            form.ShowDialog();
+            this.Mostrar();
         }
 
         private void btneliminar_Click(object sender, EventArgs e)

@@ -41,8 +41,7 @@ namespace CapaPresentacion
             FrmRegistrarProveedor form = new FrmRegistrarProveedor();
             form.Insert = true;
 
-            form.Show();
-            this.Hide();
+            form.ShowDialog();
         }
 
 
@@ -71,8 +70,7 @@ namespace CapaPresentacion
                 form.rbtninactivo.Checked = true;
             }
 
-            form.Show();
-            this.Hide();
+            form.ShowDialog();
         }
   
 

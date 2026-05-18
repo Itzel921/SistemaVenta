@@ -67,9 +67,7 @@ namespace CapaPresentacion
                     this.Insert = false;
                     this.Edit = false;
 
-                    FrmListadoEmpleado form = new FrmListadoEmpleado();
-                    form.Show();
-                    this.Hide();
+                    this.Close();
 
                 }
             }
@@ -82,9 +80,7 @@ namespace CapaPresentacion
 
         private void btncancelar_Click(object sender, EventArgs e)
         {
-            FrmListadoEmpleado form = new FrmListadoEmpleado();
-            form.Show();
-            this.Hide();
+            this.Close();
         }
 
     }

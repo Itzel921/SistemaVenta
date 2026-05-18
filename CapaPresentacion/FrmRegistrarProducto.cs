@@ -48,9 +48,7 @@ namespace CapaPresentacion
 
         private void btncancelar_Click(object sender, EventArgs e)
         {
-            FrmListadoProducto form = new FrmListadoProducto();
-            form.Show();
-            this.Hide();
+            this.Close();
         }
 
 
@@ -114,9 +112,7 @@ namespace CapaPresentacion
                     this.Insert = false;
                     this.Edit = false;
 
-                    FrmListadoProducto form = new FrmListadoProducto();
-                    form.Show();
-                    this.Hide();
+                    this.Close();
 
 
                 }

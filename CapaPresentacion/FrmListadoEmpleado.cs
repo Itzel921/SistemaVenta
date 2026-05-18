@@ -47,8 +47,8 @@ namespace CapaPresentacion
             form.Insert = true;
             form.Edit = false;
 
-            form.Show();
-            this.Hide();
+            form.ShowDialog();
+            this.Mostrar();
 
         }
 
@@ -75,8 +75,8 @@ namespace CapaPresentacion
                 form.rbtninactivo.Checked = true;
             }
 
-            form.Show();
-            this.Hide();
+            form.ShowDialog();
+            this.Mostrar();
 
         }
 
