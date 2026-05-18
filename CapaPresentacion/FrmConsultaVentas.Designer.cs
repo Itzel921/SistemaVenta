@@ -37,6 +37,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnImprimirFactura = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.lblventas)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -73,7 +74,7 @@
             // 
             this.brnReporte.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.brnReporte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.brnReporte.Location = new System.Drawing.Point(482, 592);
+            this.brnReporte.Location = new System.Drawing.Point(278, 553);
             this.brnReporte.Name = "brnReporte";
             this.brnReporte.Size = new System.Drawing.Size(170, 50);
             this.brnReporte.TabIndex = 3;
@@ -84,7 +85,7 @@
             // lblventas
             // 
             this.lblventas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.lblventas.Location = new System.Drawing.Point(39, 304);
+            this.lblventas.Location = new System.Drawing.Point(38, 265);
             this.lblventas.Name = "lblventas";
             this.lblventas.RowHeadersWidth = 51;
             this.lblventas.RowTemplate.Height = 24;
@@ -98,7 +99,7 @@
             this.panel1.Controls.Add(this.btnBuscar);
             this.panel1.Controls.Add(this.dtpFechaInicio);
             this.panel1.Controls.Add(this.dtpFechaFin);
-            this.panel1.Location = new System.Drawing.Point(171, 126);
+            this.panel1.Location = new System.Drawing.Point(170, 87);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(751, 154);
             this.panel1.TabIndex = 5;
@@ -131,11 +132,24 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Listado de ventas entre fechas";
             // 
+            // btnImprimirFactura
+            // 
+            this.btnImprimirFactura.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnImprimirFactura.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnImprimirFactura.Location = new System.Drawing.Point(625, 553);
+            this.btnImprimirFactura.Name = "btnImprimirFactura";
+            this.btnImprimirFactura.Size = new System.Drawing.Size(170, 50);
+            this.btnImprimirFactura.TabIndex = 6;
+            this.btnImprimirFactura.Text = "&Factura";
+            this.btnImprimirFactura.UseVisualStyleBackColor = true;
+            this.btnImprimirFactura.Click += new System.EventHandler(this.btnImprimirFactura_Click);
+            // 
             // FrmConsultaVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1143, 677);
+            this.Controls.Add(this.btnImprimirFactura);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblventas);
@@ -165,5 +179,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnImprimirFactura;
     }
 }

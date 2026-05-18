@@ -38,5 +38,24 @@ namespace CapaPresentacion
             frmReporte.FechaFin = dtpFechaFin.Value;
             frmReporte.ShowDialog();
         }
+
+        private void btnImprimirFactura_Click(object sender, EventArgs e)
+        {
+            if (lblventas.SelectedRows.Count > 0)
+            {
+                // Capturamos el idventa de la fila que está seleccionada actualmente
+                int idVenta = Convert.ToInt32(lblventas.CurrentRow.Cells["idventa"].Value);
+
+                // Abrimos la ventana del reporte pasándole ese ID
+                FrmReporteFactura frm = new FrmReporteFactura();
+                frm.IdVenta = idVenta;
+                frm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione una venta de la lista para imprimir su comprobante.",
+                                "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }

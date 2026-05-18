@@ -129,5 +129,33 @@ namespace CapaDatos
                 if (conexion.State == ConnectionState.Open) conexion.Close();
             }      
         }
+
+
+        public DataTable ReporteFactura(int idventa)
+        {
+            DataTable dtResultado = new DataTable();
+            SqlConnection conexion = new SqlConnection();
+            try
+            {
+                conexion.ConnectionString = Conexion.Conn;
+                SqlCommand Cmd = new SqlCommand("sp_reporte_factura", conexion);
+                Cmd.CommandType = CommandType.StoredProcedure;
+
+                // Le enviamos el ID de la venta que el usuario quiere imprimir
+                Cmd.Parameters.AddWithValue("@idventa", idventa);
+
+                SqlDataAdapter da = new SqlDataAdapter(Cmd);
+                da.Fill(dtResultado);
+                return dtResultado;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            finally
+            {
+                if (conexion.State == ConnectionState.Open) conexion.Close();
+            }
+        }
     }
 }

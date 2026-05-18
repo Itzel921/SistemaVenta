@@ -184,15 +184,13 @@ namespace CapaPresentacion
                 int idUsuario = 1;
                 int idCliente = Convert.ToInt32(idClienteSeleccionado);
 
-                // 4. GUARDAR CABECERA (Y atrapar el ID mágico)
                 int idVentaGenerada = CNVenta.Guardar(fecha, serie, num_documento, tipoDocumento, subtotal, iva, total, estado, idUsuario, idCliente);
 
                 if (idVentaGenerada > 0)
                 {
                     bool errorEnDetalle = false;
-                    string respuestaDetalle = ""; // <--- ¡AQUÍ LA DECLARAMOS AFUERA DEL CICLO!
+                    string respuestaDetalle = ""; 
 
-                    // 5. GUARDAR EL CARRITO (El ciclo mágico)
                     foreach (DataGridViewRow row in dgvDetalleVenta.Rows)
                     {
                         if (row.Cells["IdProducto"].Value != null)
@@ -208,12 +206,12 @@ namespace CapaPresentacion
                             if (respuestaDetalle != "OK")
                             {
                                 errorEnDetalle = true;
-                                break; // Si falla uno, rompemos el ciclo
+                                break; 
                             }
                         }
                     }
 
-                    // 6. Finalizar y limpiar la pantalla
+                    //Finalizar y limpiar la pantalla
                     if (!errorEnDetalle)
                     {
                         MessageBox.Show($"¡Venta registrada exitosamente!\nTicket Nro: {num_documento}", "Sistema de Ventas", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -223,10 +221,11 @@ namespace CapaPresentacion
                         txtnum_documento.Clear();
                         txtNombreCliente.Clear();
                         idClienteSeleccionado = "0";
+                    
+
                     }
                     else
                     {
-                        // Ahora sí podemos usarla porque nació antes del ciclo
                         MessageBox.Show("Error en el detalle: " + respuestaDetalle, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }

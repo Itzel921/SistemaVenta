@@ -43,5 +43,11 @@ namespace CapaNegocio
 
             return Datos.ConsultarVentasPorFecha(Datos);
         }
+
+        public static DataTable ReporteFactura(int idventa)
+        {
+            CDVenta Datos = new CDVenta();
+            return Datos.ReporteFactura(idventa);
+        }
     }
 }

@@ -694,4 +694,41 @@ BEGIN
     ORDER BY p.f_vencimiento ASC; -- Los más urgentes salen hasta arriba
 END
 
+
+
+
+
+
+
+
+
+
+CREATE PROCEDURE sp_reporte_factura
+    @idventa INT
+AS
+BEGIN
+    SELECT 
+        v.idventa,
+        v.tipo_documento,
+        (v.serie + ' - ' + v.num_documento) AS documento,
+        (c.nombre + ' ' + c.apellidos) AS cliente,
+        c.telefono,
+        (e.nombre + ' ' + e.apellidos) AS trabajador,
+        v.fecha,
+        p.idproducto AS ID,
+        p.nombre AS Descripcion,
+        d.precio AS Precio,
+        d.cantidad AS Cantidad,
+        d.total AS Total_Detalle,
+        v.subtotal AS Sub_Total,
+        v.iva AS Igv,
+        v.total AS Total_Pagar
+    FROM venta v
+    INNER JOIN cliente c ON v.idcliente = c.idcliente
+    INNER JOIN empleado e ON v.idusuario = e.idempleado 
+    INNER JOIN detalleventa d ON v.idventa = d.idventa
+    INNER JOIN producto p ON d.idproducto = p.idproducto
+    WHERE v.idventa = @idventa;
+END
+
 SELECT * FROM usuario

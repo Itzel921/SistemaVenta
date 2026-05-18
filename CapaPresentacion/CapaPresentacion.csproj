@@ -257,6 +257,12 @@
     <Compile Include="FrmReporteEmpleado.Designer.cs">
       <DependentUpon>FrmReporteEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmReporteFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReporteFactura.Designer.cs">
+      <DependentUpon>FrmReporteFactura.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmReporteProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -402,6 +408,9 @@
     <EmbeddedResource Include="FrmReporteEmpleado.resx">
       <DependentUpon>FrmReporteEmpleado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmReporteFactura.resx">
+      <DependentUpon>FrmReporteFactura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmReporteProducto.resx">
       <DependentUpon>FrmReporteProducto.cs</DependentUpon>
     </EmbeddedResource>
@@ -434,6 +443,7 @@
     <EmbeddedResource Include="Reportes\RptClientes.rdlc" />
     <EmbeddedResource Include="Reportes\RptComprasFechas.rdlc" />
     <EmbeddedResource Include="Reportes\RptEmpleados.rdlc" />
+    <EmbeddedResource Include="Reportes\RptFactura.rdlc" />
     <EmbeddedResource Include="Reportes\RptProductos.rdlc" />
     <EmbeddedResource Include="Reportes\RptStockMinimo.rdlc" />
     <EmbeddedResource Include="Reportes\RptVencimiento.rdlc" />
